@@ -9,6 +9,11 @@
     padding: 0 16px 0 61px;
 }
 
+.cross-icon {
+    width: 48px;
+    height: 48px;
+}
+
 .mobile-menu-top {
     display: flex;
     flex-direction: row;
