@@ -9,9 +9,9 @@ export class NavbarItems extends Component {
     render() {
         return (
             <Fragment>
-                <img className="search-icon" src={ SearchIcon } alt="search icon"/>
+                <img className="search-icon" src={ SearchIcon } alt="search icon" />
                 <img className="logo" src={ Logo } alt="logo" />
-                <img className="burger-icon" src={ BurgerIcon } alt="buger icon"/>
+                <img className="burger-icon" src={ BurgerIcon } alt="buger icon" />
             </Fragment>
         )
     }
