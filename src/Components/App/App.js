@@ -8,6 +8,7 @@ const App = () => {
 	
 	useEffect(() => {
 		const client_id = process.env.REACT_APP_SOUNDCLOUD_CLIENT_ID;
+		console.log(client_id);
 		const fetchData = async () => {
 			// Fetching K-play's tracks from soundcloud with a limited amount of 200
 			const result = await axios(`https://api.soundcloud.com/users/341191438/tracks/?client_id=${client_id}&limit=200`);
