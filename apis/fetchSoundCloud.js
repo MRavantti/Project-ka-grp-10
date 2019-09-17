@@ -45,7 +45,6 @@ const fetchSoundCloud = async () => {
             return console.log(err);
         }
     })
-    console.log(tracks[0]);
     console.log('SoundCloud data fetched and updated');
 }
 

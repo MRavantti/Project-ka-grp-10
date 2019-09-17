@@ -18,11 +18,10 @@ const fetchYouTube = () => {
                 fetch(`${fetchUrl}/videos?id=${item.id.videoId}&key=${apiKey}&part=contentDetails,snippet`)
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
                         if (data.items.length > 0) {
                             const newVideo = data.items[0];
                             videos.push(newVideo);
-                            const file = path.join(__dirname, './src/data/youtube.json');
+                            const file = path.join(__dirname, '../src/data/youtube.json');
                             fs.writeFile(file, JSON.stringify(videos), err => {
                                 if (err) {
                                     return console.log(err);

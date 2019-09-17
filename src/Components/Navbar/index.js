@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import './Navbar.css';
+import './style.css';
 
 import MobileMenu from '../MobileMenu';
 import NavbarItems from '../NavbarItems'

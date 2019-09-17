@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import './NavbarItems.css';
+import './style.css';
 
 import SearchIcon from '../../Images/icon.png';
 import Logo from '../../Images/logo.png';

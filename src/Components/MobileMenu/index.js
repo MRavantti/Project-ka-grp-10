@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import './MobileMenu.css'
+import './style.css'
 
 import CrossIcon from '../../Images/cross-icon.png';
 import DanceIcon from '../../Images/dance-icon.png';
