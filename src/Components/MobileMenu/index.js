@@ -12,13 +12,16 @@ import AboutIcon from '../../Images/about-icon.png';
 
 
 export class MobileMenu extends Component {
+
     render() {
+        const { toggleMenu } = this.props
         return (
             <Fragment>
                 <div className="mobile-menu">
+
                     <div className="mobile-menu-top">
                         <p>KATEGORIER</p>
-                        <img className="cross-icon" src={CrossIcon} alt="cross icon" />
+                        <img onClick={toggleMenu} className="cross-icon" src={CrossIcon} alt="cross icon" />
                     </div>
 
                     <div className="mobile-menu-middle">
@@ -39,7 +42,9 @@ export class MobileMenu extends Component {
                             <p>Teater</p>
                         </div>
                     </div>
+
                     <div className="border-line" />
+                    
                     <div className="mobile-menu-bottom">
                         <div className="profile-item">
                             <img src={ProfileIcon} alt="profile icon" />
@@ -54,6 +59,7 @@ export class MobileMenu extends Component {
                             <p>Kulturakademin</p>
                         </div>
                     </div>
+                    
                 </div>
             </Fragment>
         )

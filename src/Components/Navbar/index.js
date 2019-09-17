@@ -1,16 +1,40 @@
 import React, { Component, Fragment } from 'react';
 import './Navbar.css';
-import NavbarItems from '../NavbarItems';
+
 import MobileMenu from '../MobileMenu';
+import NavbarItems from '../NavbarItems'
+
+
+
 
 export class Navbar extends Component {
+
+    state = {
+        menuVisable: false
+    }
+
+    toggleMenu = () => {
+        this.setState(prevState => ({
+            menuVisable: !prevState.menuVisable
+        }))
+    }
+
     render() {
         return (
             <Fragment>
-                <div className="navbar">
-                    <NavbarItems />
-                </div>
-                <MobileMenu />
+                {
+                    this.state.menuVisable ?
+                        <Fragment>
+                            <MobileMenu toggleMenu={ this.toggleMenu } />
+                            <div className="navbar">
+                                <NavbarItems toggleMenu={ this.toggleMenu } />
+                            </div>
+                        </Fragment>
+                        :
+                        <div className="navbar">
+                            <NavbarItems toggleMenu={ this.toggleMenu } />
+                        </div>
+                }
             </Fragment>
         )
     }
