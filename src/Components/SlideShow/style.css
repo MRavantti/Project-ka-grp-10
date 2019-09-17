@@ -1,0 +1,31 @@
+.carousel {
+    margin-right: 16px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-points-x: repeat(100%);
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    -webkit-scroll-snap-type: mandatory;
+    -webkit-scroll-snap-points-x: repeat(100%);
+
+    scrollbar-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel > div {
+    position: relative;
+    display: inline-block;
+    width: 119px;
+    height: 119px;
+    margin-left: 16px;
+}
+
+.carousel > div:last-child {
+    margin-right: 16px;
+}

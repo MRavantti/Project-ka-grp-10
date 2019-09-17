@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-const SeeMore = () => {
+const SeeMore = (props) => {
     return (
         <div className="see-more">
-            <p>Senast Innehåll</p>
+            <p>{props.text}</p>
             <img src="./svgs/see-more.svg" alt="see-more icon"/>
         </div>
     );
