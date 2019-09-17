@@ -5,7 +5,7 @@ const SeeMore = () => {
     return (
         <div className="see-more">
             <p>Senast Innehåll</p>
-            <img src="./svgs/see-more.svg"/>
+            <img src="./svgs/see-more.svg" alt="see-more icon"/>
         </div>
     );
 };

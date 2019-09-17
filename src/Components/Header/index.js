@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import Icon from '../Icon';
+import TypeIcon from '../TypeIcon';
 
 const Header = () => {
     return (
@@ -9,7 +9,7 @@ const Header = () => {
             <h1>Kroppsens Betydelse I Sång</h1>
             <p>Kulturakademins kurs i sånggestaltning.</p>
             <p>Kursledare Pia Olby om kroppens betydelse i sång.</p>
-            <Icon type="video" size="large"/>
+            <TypeIcon type="video" size="large"/>
         </div>
     );
 };
