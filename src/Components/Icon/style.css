@@ -1,0 +1,20 @@
+.icon-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3D8FAA;
+}
+
+.icon-box.sound {
+    background: #8973B8;
+}
+
+.icon-box.large {
+    height: 42px;
+    width: 42px;
+}
