@@ -1,15 +1,15 @@
 import React from 'react';
 import './style.css';
-import Thumbnail from '../Thumbnail';
+import ContentBox from '../ContentBox';
 
-const SlideShow = () => {
+const SlideShow = (props) => {
     return (
         <div className="carousel">
-            <Thumbnail type="video" size="small"/>
-            <Thumbnail type="video" size="small"/>
-            <Thumbnail type="video" size="small"/>
-            <Thumbnail type="video" size="small"/>
-            <Thumbnail type="video" size="small"/>
+            <ContentBox type={props.type} size="small"/>
+            <ContentBox type={props.type} size="small"/>
+            <ContentBox type={props.type} size="small"/>
+            <ContentBox type={props.type} size="small"/>
+            <ContentBox type={props.type} size="small"/>
         </div>
     );
 };

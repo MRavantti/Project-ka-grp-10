@@ -1,12 +1,16 @@
 import React from 'react';
 import Navbar from '../Navbar';
+import CoursesBox from '../CoursesBox';
+import Footer from '../Footer';
 
 const Layout = ({children}) => {
     return (
-        <React.Fragment>
+        <div className="layout">
             <Navbar/>
             {children}
-        </React.Fragment>
+            <CoursesBox/>
+            <Footer/>
+        </div>
     );
 };
 

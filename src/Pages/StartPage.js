@@ -1,5 +1,5 @@
-import React from 'react';
-import Thumbnail from '../Components/Thumbnail';
+import React, { Fragment } from 'react';
+import ContentBox from '../Components/ContentBox';
 import CategoryMenu from '../Components/CategoryMenu';
 import Header from '../Components/Header';
 import SeeMore from '../Components/SeeMore';
@@ -8,16 +8,18 @@ import SlideShow from '../Components/SlideShow';
 
 const StartPage = () => {
     return (
-        <div>
+        <Fragment>
             <CategoryMenu/>
             <Header/>
             <SeeMore text="Senast Innehåll"/>
-            <Thumbnail size="large" type="video"/>
+            <ContentBox size="large" type="video" info="Videoföreläsning"/>
             <SeeMore text="Populära Videoföreläsningar"/>
-            <SlideShow/>
+            <SlideShow type="video"/>
             <SeeMore text="Nya Podcastavsnitt"/>
-            <Thumbnail size="large" type="sound"/>
-        </div>
+            <ContentBox size="large" type="sound" info="Podcast-avsnitt"/>
+            <SeeMore text="Populära Podcasts"/>
+            <SlideShow type="sound"/>
+        </Fragment>
     );
 };
 

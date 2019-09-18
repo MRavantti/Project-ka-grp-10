@@ -21,8 +21,6 @@
 .carousel > div {
     position: relative;
     display: inline-block;
-    width: 119px;
-    height: 119px;
     margin-left: 16px;
 }
 
