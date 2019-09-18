@@ -1,0 +1,43 @@
+.content-box {
+    width: 119px;
+    height: 100%;
+    white-space: initial;
+}
+
+.content-box h5, .content-box p {
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.content-box h5 {
+    font-size: 12px;
+}
+
+.content-box p {
+    font-size: 12px;
+}
+
+.content-box.large {
+    width: 100%;
+}
+
+.text-box {
+    padding-top: 8px;
+}
+
+.content-box.large .text-box {
+    padding: 8px 16px;
+}
+
+.content-box.large span {
+    font-size: 12px;
+}
+
+.content-box.large h5 {
+    font-size: 16px;
+    margin: 12px 0 8px 0;
+}
+
+.content-box.large p {
+    font-size: 14px;
+}
