@@ -7,3 +7,8 @@
     align-items: center;
     list-style-type: none;
 }
+
+.category-menu a {
+    color: #000000;
+    text-decoration: none;
+}

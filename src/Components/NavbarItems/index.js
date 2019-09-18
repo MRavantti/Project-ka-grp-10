@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 import SearchIcon from '../../Images/icon.png';
@@ -11,7 +12,7 @@ export class NavbarItems extends Component {
         return (
             <Fragment>
                 <img className="search-icon navbar-item" src={ SearchIcon } alt="search icon" />
-                <img className="logo navbar-item" src={ Logo } alt="logo" />
+                <Link to="/"><img className="logo navbar-item" src={ Logo } alt="logo" /></Link>
                 <img onClick={ toggleMenu } className="burger-icon navbar-item" src={ BurgerIcon } alt="buger icon" />
             </Fragment>
         )
