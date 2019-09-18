@@ -4,6 +4,7 @@ import CategoryMenu from '../Components/CategoryMenu';
 import Header from '../Components/Header';
 import SeeMore from '../Components/SeeMore';
 import SlideShow from '../Components/SlideShow';
+import ContentContainer from '../Components/ContentContainer';
 
 
 const StartPage = () => {
@@ -11,14 +12,10 @@ const StartPage = () => {
         <Fragment>
             <CategoryMenu/>
             <Header/>
-            <SeeMore text="Senast Innehåll"/>
-            <ContentBox size="large" type="video" info="Videoföreläsning"/>
-            <SeeMore text="Populära Videoföreläsningar"/>
-            <SlideShow type="video"/>
-            <SeeMore text="Nya Podcastavsnitt"/>
-            <ContentBox size="large" type="sound" info="Podcast-avsnitt"/>
-            <SeeMore text="Populära Podcasts"/>
-            <SlideShow type="sound"/>
+            <ContentContainer size="large" type="video" text="Senast Innehåll"/>
+            <ContentContainer size="small" type="video" text="Populära Videoföreläsningar"/>
+            <ContentContainer size="large" type="sound" text="Nya Podcastavsnitt" info="Podcast-avsnitt"/>
+            <ContentContainer size="small" type="sound" text="Populära Podcasts"/>
         </Fragment>
     );
 };

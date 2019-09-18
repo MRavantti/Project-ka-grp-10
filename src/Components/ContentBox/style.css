@@ -2,6 +2,7 @@
     width: 119px;
     height: 100%;
     white-space: initial;
+    margin-bottom: 12px;
 }
 
 .content-box h5, .content-box p {
