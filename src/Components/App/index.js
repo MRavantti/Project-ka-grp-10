@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router';
 
 import "./style.css";
 import StartPage from '../../Pages/StartPage';
-import CategoryPage from '../../Pages/Category';
+import CategoryPage from '../../Pages/CategoryPage';
 import Layout from '../Layout';
 
 // import soundcloud from '../../data/soundcloud.json';

@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 const Category = (props) => {
 
     const category = props.match.params.categoryId;
+    console.log(props.location.state);
 
     return (
         <Fragment>

@@ -11,4 +11,5 @@
 .category-menu a {
     color: #000000;
     text-decoration: none;
+    text-transform: capitalize;
 }

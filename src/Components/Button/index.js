@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Button = (props) => {
     return (
         <div className="button">
-            <Link>{props.text}</Link>  
+            <Link to="link">{props.text}</Link>
         </div>
     );
 };
