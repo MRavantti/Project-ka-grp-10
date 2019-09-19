@@ -11,11 +11,11 @@ class CategoryPageHero extends Component {
             <div className="category-page-hero">
                 <h1>{this.Capitalize(category)}</h1>
                 {
-                    category == "dans"
+                    category === "dans"
                         ? <p>ex “Från koreografi till samtal om salsa - här finner du allt material kopplat till dans”</p>
-                        : category == "film"
+                        : category === "film"
                             ? <p>film beskrivning</p>
-                            : category == "musik"
+                            : category === "musik"
                                 ? <p>musik beskrivning</p>
                                 : <p>teater beskrivning</p>
 
