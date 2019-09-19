@@ -1,14 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const CategoryMenu = () => {
+    const categories = ['dans', 'film', 'musik', 'teater'];
     return (
         <ul className="category-menu">
-            <li><a href="/category/dans">Dans</a></li>
-            <li><a href="/category/film">Film</a></li>
-            <li><a href="/category/musik">Musik</a></li>
-            <li><a href="/category/teater">Teater</a></li>
-        </ul>
+            {
+                categories.map((item, key) => {
+                    return (
+                    <li key={key}><Link to={{
+                        pathname: `/category/${item}`,
+                        state: {
+                            category: item
+                        }
+                    }}>{item}</Link></li> 
+                )})
+            }
+        </ul>  
     );
 }
 
