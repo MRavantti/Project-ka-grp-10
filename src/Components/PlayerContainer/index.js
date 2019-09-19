@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import './style.css';
+import Player from '../Player';
 import TextContainer from '../TextContainer';
 import ContentContainer from '../ContentContainer';
-import './style.css';
 import ToggleProfile from '../ToggleProfile';
 
 const PlayerContainer = () => {
@@ -15,7 +16,7 @@ const PlayerContainer = () => {
 
     return (
         <div className="player-container">
-            {/* <Player/> */}
+            <Player/>
             <TextContainer size="large" type="video" info="Masterclass" player={true} toggle={toggle} show={showInfo}/>
             {
                 showInfo && <ToggleProfile toggle={toggle}/>
