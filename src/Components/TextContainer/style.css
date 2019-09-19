@@ -1,27 +1,24 @@
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .text-container.large {
     padding: 8px 16px;
 }
 
-.text-container.large h5 {
-    font-size: 16px;
-}
-
-.text-container.large p {
-    font-size: 14px;
-}
-
-.player-info {
+.text-container .player-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 8px 0;
 }
 
-.player-info p {
+.text-container .player-info p {
     font-size: 12px;
 }
 
-.player-info .interact-container {
+.text-container .player-info .interact-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,3 +27,24 @@
     padding: 8px 0;
 }
 
+.text-container h5 {
+    margin: 4px 0;
+}
+
+.text-container.large h5 {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.text-container.large p {
+    font-size: 14px;
+}
+
+
+.text-container .see-more-btn {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+}

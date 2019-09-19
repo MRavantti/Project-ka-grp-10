@@ -1,0 +1,48 @@
+.profile-info {
+    margin: 24px 0;
+    height: 74px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-info img {
+    object-fit: cover;
+    height: 100%;
+    width: 74px;
+    border-radius: 50%;
+}
+
+.profile-info .profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    margin: 0 16px;
+}
+
+.profile-info .profile-text h5 {
+    font-size: 12px;
+}
+
+.profile-info .profile-text h3 {
+    font-size: 18px;
+}
+
+.profile-info .profile-text p {
+    font-size: 14px;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 8px;
+}

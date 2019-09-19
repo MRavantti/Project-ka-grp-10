@@ -4,7 +4,7 @@ import Interact from '../Interact';
 
 const TextContainer = (props) => {
 
-    const func = () => {
+    const showInteractive = () => {
         if (props.player) {
             return (
                 <div className="player-info">
@@ -25,15 +25,15 @@ const TextContainer = (props) => {
         <div>
             <div className={`text-container ${props.size}`}>
                 {
-                    props.info && func()
+                    props.info && showInteractive()
                 }
                 <h5>Netflix Ambitions</h5>
                 <p>Netflix's Lina Broneus on the plans for the Nordic regions</p>
                 {
-                    props.player && 
-                    <div className="see-more-btn">
+                    props.player && !props.show && 
+                    <div className="see-more-btn" onClick={props.toggle}>
                         <p>Se mer</p>
-                        <img src="/svgs/down-arrow.svg" alt="Arrow down icon"/>
+                        <img src="/assets/svgs/down-arrow.svg" alt="Arrow down icon"/>
                     </div>
                 }
             </div>

@@ -8,7 +8,7 @@ const BackArrow = (props) => {
 
     return (
         <div className={`back-arrow ${type}`}>
-            <img src="/svgs/back-arrow.svg" alt="Back arrow icon"/>
+            <img src="/assets/svgs/back-arrow.svg" alt="Back arrow icon"/>
         </div>
     );
 };
