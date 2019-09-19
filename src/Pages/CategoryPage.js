@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const Category = (props) => {
+const CategoryPage = (props) => {
 
     const category = props.match.params.categoryId;
     console.log(props.location.state);
@@ -12,4 +12,4 @@ const Category = (props) => {
     );
 };
 
-export default Category;
+export default CategoryPage;

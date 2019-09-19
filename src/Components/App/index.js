@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router';
 import "./style.css";
 import StartPage from '../../Pages/StartPage';
 import CategoryPage from '../../Pages/CategoryPage';
+import PlayerPage from '../../Pages/PlayerPage';
 import Layout from '../Layout';
 
 // import soundcloud from '../../data/soundcloud.json';
@@ -19,7 +20,7 @@ const App = () => {
 				<Switch>
 					<Route path="/" exact component={StartPage} />
 					<Route path="/category/:categoryId" component={CategoryPage}/>
-					{/* <Route path="/play" component={PlayPage}/> */}
+					<Route path="/player/:playerId" component={PlayerPage}/>
 					{/* <Route component={NotFound}/> */}
 				</Switch>
 			</Layout>
