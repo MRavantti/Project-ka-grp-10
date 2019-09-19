@@ -4,11 +4,11 @@ import './style.css';
 const CategoryMenu = () => {
     return (
         <ul className="category-menu">
-            <li>Dans</li> 
-            <li>Film</li> 
-            <li>Musik</li> 
-            <li>Teater</li>
-        </ul>  
+            <li><a href="/category/dans">Dans</a></li>
+            <li><a href="/category/film">Film</a></li>
+            <li><a href="/category/musik">Musik</a></li>
+            <li><a href="/category/teater">Teater</a></li>
+        </ul>
     );
 }
 

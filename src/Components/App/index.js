@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router';
 
 import "./style.css";
 import StartPage from '../../Pages/StartPage';
+import CategoryPage from '../CategoryPage';
 import Layout from '../Layout';
 
 // import soundcloud from '../../data/soundcloud.json';
@@ -17,7 +18,8 @@ const App = () => {
 			<Layout>
 				<Switch>
 					<Route path="/" exact component={StartPage} />
-					{/* <Route path="/category" component={CategoryPage}/>
+					<Route path="/category" component={CategoryPage}/>
+					{/* 
 					<Route path="/play" component={PlayPage}/>
 					<Route component={NotFound}/> */}
 				</Switch>
