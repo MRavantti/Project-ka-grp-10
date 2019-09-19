@@ -1,0 +1,32 @@
+.text-container.large {
+    padding: 8px 16px;
+}
+
+.text-container.large h5 {
+    font-size: 16px;
+}
+
+.text-container.large p {
+    font-size: 14px;
+}
+
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.player-info p {
+    font-size: 12px;
+}
+
+.player-info .interact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+    padding: 8px 0;
+}
+

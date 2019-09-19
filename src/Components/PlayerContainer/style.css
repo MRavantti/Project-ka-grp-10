@@ -1,0 +1,24 @@
+.player-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-container .player-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-container .player-info p {
+    font-size: 12px;
+}
+
+.player-container .interact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+    padding: 8px 0;
+}
