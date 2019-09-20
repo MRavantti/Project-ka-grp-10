@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 import YouTube from 'react-youtube';
 
-const Player = () => {
+const YouTubePlayer = () => {
 
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
-        const player = document.querySelector('.player');
+        const player = document.querySelector('.youtube-player');
         let newHeight = player.scrollWidth/1.7778;
         setHeight(newHeight);
     }, [height])
@@ -22,7 +22,7 @@ const Player = () => {
     }
 
     return (
-        <div className="player">
+        <div className="youtube-player">
             <YouTube
                 videoId="_BhiH3GG8pI"
                 opts = {opts}
@@ -31,4 +31,4 @@ const Player = () => {
     );
 };
 
-export default Player;
+export default YouTubePlayer;
