@@ -1,26 +1,69 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import './CategoryPageHero.css'
+import BackButton from '../BackButton';
+import MediaButtons from '../MediaCategoryButtons';
+
+import DanceHero from '../../Images/dance-hero.png'
+import MovieHero from '../../Images/movie-hero.png'
+import MusicHero from '../../Images/music-hero.png'
+import TheatreHero from '../../Images/theatre-hero.png'
 
 class CategoryPageHero extends Component {
     Capitalize(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
+
+    Category(category) {
+        if (category === "dans") {
+            return (
+                "ex “Från koreografi till samtal om salsa - här finner du allt material kopplat till dans”"
+            );
+        }
+        else if (category === "film") {
+            return ("film beskrivning")
+        }
+        else if (category === "musik") {
+            return ("musik beskrivning")
+        }
+        else {
+            return ("teater beskrivning")
+        }
+    }
+
     render() {
         const { category } = this.props
 
         return (
-            <div className="category-page-hero">
-                <h1>{this.Capitalize(category)}</h1>
+            <Fragment>
                 {
                     category === "dans"
-                        ? <p>ex “Från koreografi till samtal om salsa - här finner du allt material kopplat till dans”</p>
+                        ? <div className="category-page-hero" style={{ backgroundImage: `url(${DanceHero})` }} >
+                            <BackButton />
+                            <h1>{this.Capitalize(category)}</h1>
+                            <p>{this.Category(category)}</p>
+                        </div>
                         : category === "film"
-                            ? <p>film beskrivning</p>
+                            ? <div className="category-page-hero" style={{ backgroundImage: `url(${MovieHero})` }} >
+                                <BackButton />
+                                <h1>{this.Capitalize(category)}</h1>
+                                <p>{this.Category(category)}</p>
+                            </div>
                             : category === "musik"
-                                ? <p>musik beskrivning</p>
-                                : <p>teater beskrivning</p>
-
+                                ? <div className="category-page-hero" style={{ backgroundImage: `url(${MusicHero})` }} >
+                                    <BackButton />
+                                    <h1>{this.Capitalize(category)}</h1>
+                                    <p>{this.Category(category)}</p>
+                                </div>
+                                : category === "teater"
+                                    ? <div className="category-page-hero" style={{ backgroundImage: `url(${TheatreHero})` }} >
+                                        <BackButton />
+                                        <h1>{this.Capitalize(category)}</h1>
+                                        <p>{this.Category(category)}</p>
+                                    </div>
+                                    : null
                 }
-            </div>
+                <MediaButtons />
+            </Fragment>
         )
     }
 }
