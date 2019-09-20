@@ -4,9 +4,6 @@ import './style.css';
 import MobileMenu from '../MobileMenu';
 import NavbarItems from '../NavbarItems'
 
-
-
-
 export class Navbar extends Component {
 
     state = {
@@ -23,16 +20,16 @@ export class Navbar extends Component {
         return (
             <Fragment>
                 {
-                    this.state.menuVisable ?
-                        <Fragment>
-                            <MobileMenu toggleMenu={ this.toggleMenu } />
+                    this.state.menuVisable
+                        ? <Fragment>
+                            <MobileMenu toggleMenu={this.toggleMenu} />
                             <div className="navbar">
-                                <NavbarItems toggleMenu={ this.toggleMenu } />
+                                <NavbarItems toggleMenu={this.toggleMenu} />
                             </div>
                         </Fragment>
-                        :
-                        <div className="navbar">
-                            <NavbarItems toggleMenu={ this.toggleMenu } />
+                        
+                        : <div className="navbar">
+                            <NavbarItems toggleMenu={this.toggleMenu} />
                         </div>
                 }
             </Fragment>
