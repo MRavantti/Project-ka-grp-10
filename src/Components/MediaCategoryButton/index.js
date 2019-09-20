@@ -9,7 +9,7 @@ const MediaCategoryButton = (props) => {
         <div className={props.className}>
             <Link to="link">
                 <button style={{backgroundColor: `${props.backgroundColor}`}}>
-                    <img className="media-icon" src={MediaIcon} />
+                    <img className="media-icon" src={MediaIcon} alt="media icon" />
                     {props.text}
                 </button>
                 </Link>
