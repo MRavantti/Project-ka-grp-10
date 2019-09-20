@@ -1,0 +1,15 @@
+.category-button button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50vw;
+    height: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+.media-icon {
+    margin: 0 28px 0 16px;
+}
