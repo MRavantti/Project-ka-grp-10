@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import CategoryPageHero from '../Components/CategoryPageHero';
+import ContentContainer from '../Components/ContentContainer';
 
 const CategoryPage = (props) => {
 
@@ -7,7 +9,10 @@ const CategoryPage = (props) => {
 
     return (
         <Fragment>
-            <h1>This is the category page for {category}</h1>
+            <CategoryPageHero category={category} />
+            <ContentContainer size="small" type="sound" text="Senaste Podcasts" />
+            <ContentContainer size="small" type="video" text="Senaste Videoföreläsningar" />
+            <ContentContainer size="small" type="video" text="Kategori Namn"/>
         </Fragment>
     );
 };
