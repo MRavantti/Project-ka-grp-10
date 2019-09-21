@@ -70,3 +70,7 @@
 .prev-button > svg, .next-button > svg, .play-button > svg {
     display: none;
 }
+
+.progress-container {
+    border: 1px solid black;
+}
