@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import BackArrow from '../Components/BackArrow';
+import PlayerContainer from '../Components/PlayerContainer';
 
 const PlayerPage = (props) => {
+
+    const id = props.location.state.playerId
+
     return (
-        <h1>This is the player page for content: {props.location.state.playerId}</h1>
+        <Fragment>
+            <BackArrow transparent={false}/>
+            <PlayerContainer/>
+        </Fragment>
     )
 }
 
