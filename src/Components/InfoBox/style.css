@@ -1,0 +1,15 @@
+.info-box {
+    display: grid;
+    grid-template: auto auto / auto auto;
+    grid-gap: 10px;
+    margin-top: 16px;
+}
+
+.info-box li {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.info-box li span {
+    font-weight: normal;
+}

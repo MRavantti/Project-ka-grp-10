@@ -12,7 +12,7 @@ const StartPage = () => {
         <Fragment>
             <CategoryMenu/>
             <Header/>
-            <ContentContainer size="large" type="video" text="Senast Innehåll"/>
+            <ContentContainer size="large" type="video" text="Senast Innehåll" info="Videoföreläsning"/>
             <ContentContainer size="small" type="video" text="Populära Videoföreläsningar"/>
             <ContentContainer size="large" type="sound" text="Nya Podcastavsnitt" info="Podcast-avsnitt"/>
             <ContentContainer size="small" type="sound" text="Populära Podcasts"/>

@@ -5,7 +5,7 @@ const SeeMore = (props) => {
     return (
         <div className="see-more">
             <p>{props.text}</p>
-            <div onClick={props.toggle}><img src="./svgs/see-more.svg" alt="see-more icon"/></div>
+            <div onClick={props.toggle}><img src="/assets/svgs/see-more.svg" alt="see-more icon"/></div>
         </div>
     );
 };
