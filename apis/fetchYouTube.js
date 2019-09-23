@@ -4,6 +4,7 @@ const path = require('path');
 const maxResults = 50;
 const apiKey = process.env.YT_API_KEY;
 const channelId = process.env.YT_CHANNEL_ID;
+const durationFunction= require('./durationFunction.js');
 
 const fetchYouTube = () => {
 
@@ -19,8 +20,23 @@ const fetchYouTube = () => {
                     .then(res => res.json())
                     .then(data => {
                         if (data.items.length > 0) {
-                            const newVideo = data.items[0];
-                            videos.push(newVideo);
+                            const video = data.items[0];
+                            const snippet = video.snippet;
+                            const durationInSeconds = durationFunction.YTDurationToSeconds(video.contentDetails.duration);
+							const formatDuration = durationFunction.formatDuration(durationInSeconds);
+							
+                            const updateVideo = {
+                                id: video.id,
+                                title: snippet.title,
+                                description: snippet.description,
+                                publishedAt: snippet.publishedAt,
+                                thumbnails: snippet.thumbnails,
+                                tags: snippet.tags,
+                                duration: formatDuration,
+                                type: 'video'
+							}
+							
+                            videos.push(updateVideo);
                             const file = path.join(__dirname, '../src/data/youtube.json');
                             fs.writeFile(file, JSON.stringify(videos), err => {
                                 if (err) {
