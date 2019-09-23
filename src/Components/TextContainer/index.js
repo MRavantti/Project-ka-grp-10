@@ -26,8 +26,9 @@ const TextContainer = (props) => {
             {
                 props.info && showInteractive()
             }
-            <h5>Netflix Ambitions</h5>
-            <p>Netflix's Lina Broneus on the plans for the Nordic regions</p>
+            <p className="course-type">{props.courseType}</p>
+            <h5>{props.header}</h5>
+            <p>{props.text}</p>
             {
                 props.player && !props.show && 
                 <div className="see-more-btn" onClick={props.toggle}>

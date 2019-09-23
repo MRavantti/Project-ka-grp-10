@@ -7,7 +7,7 @@ const ContentBox = (props) => {
     return (
         <div className={`content-box ${props.size}`}>
             <Thumbnail  type={props.type} size={props.size} date={props.date}/>
-            <TextContainer type={props.type} size={props.size} info={props.info}/>
+            <TextContainer type={props.type} size={props.size} info={props.info} header={props.header} text={props.text} courseType={props.courseType} />
         </div>
     );
 };

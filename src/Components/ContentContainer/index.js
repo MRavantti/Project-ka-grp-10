@@ -33,7 +33,7 @@ const ContentContainer = (props) => {
     return (
         <div className="content-container">
             <SeeMore title={props.title} toggle={func}/>
-            <ContentBox size={props.size} type={props.type} info={props.info} date={props.date}/>
+            <ContentBox size={props.size} type={props.type} info={props.info} date={props.date} header={props.header} text={props.text} courseType={props.courseType} />
         </div>
     );
 };
