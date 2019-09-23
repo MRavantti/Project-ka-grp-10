@@ -26,7 +26,6 @@ const TextContainer = (props) => {
             {
                 props.info && showInteractive()
             }
-            <p className="course-type">{props.courseType}</p>
             <h5>{props.header}</h5>
             <p>{props.text}</p>
             {

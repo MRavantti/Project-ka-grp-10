@@ -36,7 +36,7 @@
     margin: 8px 0;
 }
 
-.large p {
+.text-container.large p {
     font-size: 14px;
 }
 
@@ -47,9 +47,4 @@
     flex-direction: column;
     align-items: center;
     align-self: flex-end;
-}
-
-.course-type {
-    font-size: 12px !important;
-    font-weight: lighter;
 }

@@ -18,12 +18,12 @@ const ContentContainer = (props) => {
         return (
             <div className="content-container">
                 <SeeMore title={props.title} toggle={func}/>
-                <SlideShow type={props.type} img={props.img} header={props.header} text={props.text} />
+                <SlideShow type={props.type} img={props.img} />
                 {
                     showMore && 
                     <Fragment>
-                        <SlideShow type={props.type} img={props.img} header={props.header} text={props.text} />
-                        <SlideShow type={props.type} img={props.img} header={props.header} text={props.text} />
+                        <SlideShow type={props.type} img={props.img} />
+                        <SlideShow type={props.type} img={props.img} />
                     </Fragment>
                 }
             </div>
@@ -33,7 +33,7 @@ const ContentContainer = (props) => {
     return (
         <div className="content-container">
             <SeeMore title={props.title} toggle={func}/>
-            <ContentBox size={props.size} type={props.type} info={props.info} date={props.date} header={props.header} text={props.text} courseType={props.courseType} img={props.img} />
+            <ContentBox size={props.size} type={props.type} info={props.info} date={props.date} header={props.header} text={props.text} info={props.info} img={props.img} />
         </div>
     );
 };

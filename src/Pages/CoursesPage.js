@@ -20,7 +20,7 @@ const CoursesPage = (props) => {
                 date="6 nov"
                 header="Art and business"
                 text="En satsning för att öka kunskapen om företagande hos kreatörer och konstnärer."
-                courseType="Workshop"
+                info="Workshop"
             />
             <div className="read-more-button">
                 <Button text="Läs mer & ansök" />
