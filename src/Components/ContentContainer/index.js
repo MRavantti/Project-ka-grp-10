@@ -17,7 +17,7 @@ const ContentContainer = (props) => {
     if (props.size === "small") {
         return (
             <div className="content-container">
-                <SeeMore text={props.text} toggle={func}/>
+                <SeeMore title={props.title} toggle={func}/>
                 <SlideShow type={props.type}/>
                 {
                     showMore && 
@@ -32,8 +32,8 @@ const ContentContainer = (props) => {
 
     return (
         <div className="content-container">
-            <SeeMore text="Senast Innehåll" toggle={func}/>
-            <ContentBox size={props.size} type={props.type} info={props.info}/>
+            <SeeMore title={props.title} toggle={func}/>
+            <ContentBox size={props.size} type={props.type} info={props.info} date={props.date}/>
         </div>
     );
 };
