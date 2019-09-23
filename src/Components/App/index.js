@@ -7,6 +7,7 @@ import StartPage from '../../Pages/StartPage';
 import CategoryPage from '../../Pages/CategoryPage';
 import PlayerPage from '../../Pages/PlayerPage';
 import RelatedPage from '../../Pages/RelatedPage';
+import CoursesPage from '../../Pages/CoursesPage.js';
 import Layout from '../Layout';
 
 // import soundcloud from '../../data/soundcloud.json';
@@ -23,6 +24,7 @@ const App = () => {
 					<Route path="/category/:categoryId" component={CategoryPage} />
 					<Route path="/player/:playerId" component={PlayerPage} />
 					<Route path="/related-courses" component={RelatedPage} />
+					<Route path="/courses" component={CoursesPage} />
 					{/* <Route component={NotFound}/> */}
 				</Switch>
 			</Layout>
