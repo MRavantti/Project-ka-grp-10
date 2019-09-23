@@ -6,7 +6,7 @@ import TextContainer from '../TextContainer';
 const ContentBox = (props) => {
     return (
         <div className={`content-box ${props.size}`}>
-            <Thumbnail  type={props.type} size={props.size} date={props.date}/>
+            <Thumbnail type={props.type} size={props.size} date={props.date} img={props.img} />
             <TextContainer type={props.type} size={props.size} info={props.info} header={props.header} text={props.text} courseType={props.courseType} />
         </div>
     );

@@ -14,7 +14,8 @@ const CoursesPage = (props) => {
             <CoursesPageHero />
             <ContentContainer
                 title="Aktuella kurser"
-                img={CurrentCourses} size="large"
+                img={CurrentCourses}
+                size="large"
                 type="course"
                 date="6 nov"
                 header="Art and business"
