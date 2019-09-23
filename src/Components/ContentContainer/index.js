@@ -25,18 +25,23 @@ const ContentContainer = (props) => {
 
                     headerOne={props.headerOne}
                     textOne={props.textOne}
+                    dateOne={props.dateOne}
 
                     headerTwo={props.headerTwo}
                     textTwo={props.textTwo}
+                    dateTwo={props.dateTwo}
 
                     headerThree={props.headerThree}
                     textThree={props.textThree}
+                    dateThree={props.dateThree}
 
                     headerFour={props.headerFour}
                     textFour={props.textFour}
+                    dateFour={props.dateFour}
 
                     headerFive={props.headerFive}
                     textFive={props.textFive}
+                    dateFive={props.dateFive}
                 />
                 {
                     showMore &&
@@ -48,18 +53,23 @@ const ContentContainer = (props) => {
 
                             headerOne={props.headerSix}
                             textOne={props.textSix}
+                            dateOne={props.dateSix}
 
                             headerTwo={props.headerSeven}
                             textTwo={props.textSeven}
+                            dateTwo={props.dateSeven}
 
                             headerThree={props.headerEight}
                             textThree={props.textEight}
+                            dateThree={props.dateEight}
 
                             headerFour={props.headerNine}
                             textFour={props.textNine}
+                            dateFour={props.dateNine}
 
                             headerFive={props.headerTen}
                             textFive={props.textTen}
+                            dateFive={props.dateTen}
                         />
                         <SlideShow
                             type={props.type}
@@ -68,18 +78,24 @@ const ContentContainer = (props) => {
 
                             headerOne={props.headerEleven}
                             textOne={props.textEleven}
+                            dateOne={props.dateEleven}
+
 
                             headerTwo={props.headerTwelve}
                             textTwo={props.textTwelve}
+                            dateTwo={props.dateTwelve}
 
                             headerThree={props.headerThirteen}
                             textThree={props.textThirteen}
+                            dateThree={props.dateThirteen}
 
                             headerFour={props.headerFourteen}
                             textFour={props.textFourteen}
+                            dateFour={props.dateFourteen}
                             
                             headerFive={props.headerFifteen}
                             textFive={props.textFifteen}
+                            dateFive={props.dateFifteen}
                         />
                     </Fragment>
                 }

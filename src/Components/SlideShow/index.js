@@ -11,6 +11,7 @@ const SlideShow = (props) => {
                 img={props.img}
                 header={props.headerOne}
                 text={props.textOne}
+                date={props.dateOne}
             />
             <ContentBox
                 type={props.type}
@@ -18,6 +19,7 @@ const SlideShow = (props) => {
                 img={props.img}
                 header={props.headerTwo}
                 text={props.textTwo}
+                date={props.dateTwo}
             />
             <ContentBox
                 type={props.type}
@@ -25,6 +27,7 @@ const SlideShow = (props) => {
                 img={props.img}
                 header={props.headerThree}
                 text={props.textThree}
+                date={props.dateThree}
             />
             <ContentBox
                 type={props.type}
@@ -32,6 +35,7 @@ const SlideShow = (props) => {
                 img={props.img}
                 header={props.headerFour}
                 text={props.textFour}
+                date={props.dateFour}
             />
             <ContentBox
                 type={props.type}
@@ -39,6 +43,7 @@ const SlideShow = (props) => {
                 img={props.img}
                 header={props.headerFive}
                 text={props.textFive}
+                date={props.dateFive}
             />
         </div>
     );
