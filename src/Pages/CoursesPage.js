@@ -22,6 +22,9 @@ const CoursesPage = (props) => {
                 text="En satsning för att öka kunskapen om företagande hos kreatörer och konstnärer."
                 info="Workshop"
             />
+            <div className="read-more-button">
+                <Button text="Läs mer & ansök" />
+            </div>
             <ContentContainer
                 size="small"
                 type="course"
@@ -155,9 +158,6 @@ const CoursesPage = (props) => {
                 textFifteen="lorem ipsum"
                 dateFifteen="18 nov"
             />
-            <div className="read-more-button">
-                <Button text="Läs mer & ansök" />
-            </div>
 
         </Fragment>
     );
