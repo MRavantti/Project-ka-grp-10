@@ -1,0 +1,20 @@
+.course-box {
+    display: flex;
+    flex-direction: column;
+    margin: 42px 16px 31px 16px;
+}
+
+.read-more-button {
+ display: flex;
+ justify-content: flex-end;
+}
+
+.course-excerpt {
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.course-name {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
