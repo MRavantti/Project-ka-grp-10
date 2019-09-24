@@ -7,6 +7,7 @@ import DanceHero from '../../Images/dance-hero.png'
 import MovieHero from '../../Images/movie-hero.png'
 import MusicHero from '../../Images/music-hero.png'
 import TheatreHero from '../../Images/theatre-hero.png'
+import BackButtonImage from '../../Images/back-button.png'
 
 class CategoryPageHero extends Component {
     Capitalize(str) {
@@ -38,25 +39,25 @@ class CategoryPageHero extends Component {
                 {
                     category === "dans"
                         ? <div className="category-page-hero" style={{ backgroundImage: `url(${DanceHero})` }} >
-                            <BackButton />
+                            <BackButton link={"/"} img={BackButtonImage} />
                             <h1>{this.Capitalize(category)}</h1>
                             <p>{this.Category(category)}</p>
                         </div>
                         : category === "film"
                             ? <div className="category-page-hero" style={{ backgroundImage: `url(${MovieHero})` }} >
-                                <BackButton />
+                                <BackButton link={"/"} img={BackButtonImage} />
                                 <h1>{this.Capitalize(category)}</h1>
                                 <p>{this.Category(category)}</p>
                             </div>
                             : category === "musik"
                                 ? <div className="category-page-hero" style={{ backgroundImage: `url(${MusicHero})` }} >
-                                    <BackButton />
+                                    <BackButton link={"/"} img={BackButtonImage} />
                                     <h1>{this.Capitalize(category)}</h1>
                                     <p>{this.Category(category)}</p>
                                 </div>
                                 : category === "teater"
                                     ? <div className="category-page-hero" style={{ backgroundImage: `url(${TheatreHero})` }} >
-                                        <BackButton />
+                                        <BackButton link={"/"} img={BackButtonImage} />
                                         <h1>{this.Capitalize(category)}</h1>
                                         <p>{this.Category(category)}</p>
                                     </div>
