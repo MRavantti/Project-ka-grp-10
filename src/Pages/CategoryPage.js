@@ -13,9 +13,9 @@ const CategoryPage = (props) => {
     return (
         <Fragment>
             <CategoryPageHero category={category} />
-            <ContentContainer size="small" type="sound" text="Senaste Podcasts" />
-            <ContentContainer size="small" type="video" text="Senaste Videoföreläsningar" />
-            <ContentContainer size="small" type="video" text="Kategori Namn"/>
+            <ContentContainer size="small" text="Senaste Podcasts" content={podcasts.slice(50, 65)}/>
+            <ContentContainer size="small" text="Senaste Videoföreläsningar" content={videos.slice(1, 16)}/>
+            <ContentContainer size="small" text="Kategori Namn" content={podcasts.slice(65, 80)}/>
         </Fragment>
     );
 };
