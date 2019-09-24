@@ -10,7 +10,7 @@
 	justify-content: space-between;
 }
 
-.player {
+.soundcloud-player .player {
 	width: 100%;
 	/* background: #8973B8; */
     display: flex;
@@ -18,13 +18,13 @@
 	justify-content: space-between;
 }
 
-.player .controls {
+.soundcloud-player .player .controls {
 	padding: 0 88px 0 16px;
 	height: 50px;
 	background: #8973B8;
 }
 
-.player .progress {
+.soundcloud-player .player .progress {
 	width: 100%;
 	height: 100%;
 	border-right: 3px solid #fff;
@@ -32,14 +32,14 @@
 	z-index: 1;
 }
 
-.progress-container {
+.soundcloud-player .progress-container {
 	position: relative;
 	display: flex;
 	align-items: center;
 	height: 17px;
 }
 
-.progress-container:after {
+.soundcloud-player .progress-container:after {
 	background: rgba(255, 255, 255, 0.35);
 	position: absolute;
 	bottom: 0;
@@ -49,7 +49,7 @@
 	content: "";
 }
 
-.player > .controls {
+.soundcloud-player .player > .controls {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -65,64 +65,64 @@
     margin: 0;
 }
 
-.player button svg {
+.soundcloud-player .player button svg {
     fill: white;
 }
 
-.player button {
+.soundcloud-player .player button {
 	width: 24px;
 	height: 24px;
 }
 
-.player .prev-button {
+.soundcloud-player .player .prev-button {
     background: url("/assets/svgs/previous.svg");
     background-position: center;
     background-size: contain;
-    background-repeat: none;
+    background-repeat: no-repeat;
 }
 
-.player .replay-button {
+.soundcloud-player .player .replay-button {
     background: url("/assets/svgs/replay-10.svg");
     background-position: center;
     background-size: contain;
-    background-repeat: none;
+    background-repeat: no-repeat;
 }
 
-.player .forward-button {
+.soundcloud-player .player .forward-button {
     background: url("/assets/svgs/forward-10.svg");
     background-position: center;
     background-size: contain;
-    background-repeat: none;
+    background-repeat: no-repeat;
 }
 
 .soundcloud-player .play-button {
 	background: url("/assets/svgs/play-big.svg");
     background-position: center;
     background-size: contain;
-	background-repeat: none;
+	background-repeat: no-repeat;
 }
 
-.play-button.playing {
+.soundcloud-player .play-button.playing {
 	background: url("/assets/svgs/pause.svg");
 	background-position: center;
 	background-size: contain;
-	background-repeat: none;
+	background-repeat: no-repeat;
 }
 
 .prev-button > svg, .replay-button > svg, .forward-button > svg, .play-button > svg {
     display: none;
 }
 
-.play-button {
+.soundcloud-player .play-button {
 	min-width: 64px;
 	min-height: 64px;
 }
 
-.play-button.playing {
+.soundcloud-player .play-button.playing {
 	min-width: 64px;
 	min-height: 64px;
 }
 
-.timer {
+.soundcloud-player .timer {
 	color: #fff;
 }

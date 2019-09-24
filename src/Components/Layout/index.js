@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar';
 import CoursesBox from '../CoursesBox';
 import Footer from '../Footer';
-import SoundCloudPlayer from '../SoundCloudPlayer';
+import PlayerMinimized from '../PlayerMinimized';
 import podcasts from '../../data/soundcloud.json';
 
 const Layout = ({children}) => {
@@ -12,7 +12,7 @@ const Layout = ({children}) => {
             <Navbar/>
             {children}
             <CoursesBox/>
-			<SoundCloudPlayer
+			<PlayerMinimized
                     streamUrl={content.url}
                     trackTitle={content.title}
                     preloadType="metadata"
