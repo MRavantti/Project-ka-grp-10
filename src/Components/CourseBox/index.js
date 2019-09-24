@@ -8,7 +8,7 @@ const CourseBox = (props) => {
             <h3 className="course-name">{props.courseName}</h3>
             <p className="course-excerpt">{props.courseExcerpt}</p>
             <div className="read-more-button">
-            <Button text="Läs mer och ansök" />
+            <Button text="Läs mer & ansök" />
             </div>
         </div>
     );
