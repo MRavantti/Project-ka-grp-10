@@ -10,11 +10,6 @@ import RelatedPage from '../../Pages/RelatedPage';
 import CoursesPage from '../../Pages/CoursesPage.js';
 import Layout from '../Layout';
 
-// import soundcloud from '../../data/soundcloud.json';
-// import youtube from '../../data/youtube.json';
-
-// const data = [...soundcloud, ...youtube];
-
 const App = () => {
 	return (
 		<Router>

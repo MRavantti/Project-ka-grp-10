@@ -5,12 +5,15 @@ import TextContainer from '../TextContainer';
 import ContentContainer from '../ContentContainer';
 import ToggleProfile from '../ToggleProfile';
 import SoundCloudPlayer from '../SoundCloudPlayer';
+import videos from '../../data/youtube';
 
-const PlayerContainer = () => {
+const PlayerContainer = ({content}) => {
+
+	const related = videos.slice(0, 15);
 
     const [showInfo, setShowInfo] = useState(false);
 
-    let video = false;
+	let video = content.type === "video" ? true : false;
 
     const toggle = () => {
         console.log('click');
@@ -21,19 +24,19 @@ const PlayerContainer = () => {
         <div className="player-container">
             {
                 video ? 
-                <YouTubePlayer/> : 
+                <YouTubePlayer id={content.id}/> : 
                 <SoundCloudPlayer
-                    streamUrl="https://api.soundcloud.com/tracks/501159645/stream"
-                    trackTitle="track one"
+                    streamUrl={content.streamUrl}
+                    trackTitle={content.title}
                     preloadType="metadata"
                     clientId={process.env.REACT_APP_SC_CLIENT_ID}
                 />
             }
-            <TextContainer size="large" type="video" info="Masterclass" player={true} toggle={toggle} show={showInfo}/>
+            <TextContainer size="large" info="Masterclass" player={true} toggle={toggle} show={showInfo} content={content}/>
             {
                 showInfo && <ToggleProfile toggle={toggle}/>
             }
-            <ContentContainer size="small" type="video" type="video" text="Relaterat innehåll"/>
+            <ContentContainer size="small" text="Relaterat innehåll" content={related}/>
         </div>
     );
 };

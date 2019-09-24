@@ -5,20 +5,20 @@ import TextContainer from '../TextContainer';
 import { Link } from 'react-router-dom';
 
 const ContentBox = (props) => {
-    const { content } = props;
-
+	const { content } = props;
+	
     return (
-        <div className={`content-box ${props.size}`}>
-            <Link to={{
-                pathname: `/player/${content.id}`,
-                state: {
-                    playerId: content.id
-                }
-            }}>
-                <Thumbnail type={content.type} size={props.size} content={content} />
-                <TextContainer type={content.type} size={props.size} content={content} />
-            </Link>
-        </div>
+		<div className={`content-box ${props.size}`}>
+			<Link to={{
+				pathname: `/player/${content.id}`,
+				state: {
+					playerId: content.id
+				}
+			}}>
+				<Thumbnail  type={content.type} size={props.size} content={content}/>
+				<TextContainer type={content.type} size={props.size} content={content}/>
+			</Link>
+		</div>
     );
 };
 

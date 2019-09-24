@@ -5,6 +5,11 @@
     margin-bottom: 12px;
 }
 
+.content-box a {
+	text-decoration: none;
+	color: black;
+}
+
 .content-box h5, .content-box p {
     word-break: break-word;
     hyphens: auto;
