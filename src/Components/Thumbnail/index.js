@@ -3,8 +3,11 @@ import './style.css';
 import TypeIcon from '../TypeIcon';
 
 const Thumbnail = (props) => {
+	let thumbnail;
+	thumbnail = props.content.thumbnail ? props.content.thumbnail : props.content.thumbnails.high.url
+	
     return (
-        <div className={`thumbnail-box ${props.size}`} style={{backgroundImage:"url(https://i.ytimg.com/vi/qvWzFtNPbB4/default.jpg)"}}>
+        <div className={`thumbnail-box ${props.size}`} style={{backgroundImage:`url(${thumbnail})`}}>
             <TypeIcon type={props.type} size={props.size}/>
         </div>
     );

@@ -9,11 +9,6 @@ import PlayerPage from '../../Pages/PlayerPage';
 import RelatedPage from '../../Pages/RelatedPage';
 import Layout from '../Layout';
 
-// import soundcloud from '../../data/soundcloud.json';
-// import youtube from '../../data/youtube.json';
-
-// const data = [...soundcloud, ...youtube];
-
 const App = () => {
 	return (
 		<Router>

@@ -5,11 +5,11 @@ import ContentBox from '../ContentBox';
 const SlideShow = (props) => {
     return (
         <div className="carousel">
-            <ContentBox type={props.type} size="small"/>
-            <ContentBox type={props.type} size="small"/>
-            <ContentBox type={props.type} size="small"/>
-            <ContentBox type={props.type} size="small"/>
-            <ContentBox type={props.type} size="small"/>
+			{
+				props.content.map(item => {
+					return <ContentBox key={item.id} content={item} size="small"/>
+				})
+			}
         </div>
     );
 };

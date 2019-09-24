@@ -1,5 +1,5 @@
 import React from 'react';
-import { PlayButton, PrevButton, NextButton, VolumeControl, Timer, Progress } from 'react-soundplayer/components';
+import { PlayButton, PrevButton, NextButton, Timer, Progress } from 'react-soundplayer/components';
 import { withCustomAudio } from 'react-soundplayer/addons';
 import './style.css';
 import { togglePlay } from '../../functions/scPlayer';
