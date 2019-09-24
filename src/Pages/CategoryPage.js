@@ -2,6 +2,9 @@ import React, { Fragment } from 'react';
 import CategoryPageHero from '../Components/CategoryPageHero';
 import ContentContainer from '../Components/ContentContainer';
 
+import videos from '../data/youtube';
+import podcasts from '../data/soundcloud';
+
 const CategoryPage = (props) => {
 
     const category = props.match.params.categoryId;
