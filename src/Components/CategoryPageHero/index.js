@@ -32,31 +32,31 @@ class CategoryPageHero extends Component {
 
     render() {
         const { category } = this.props
-
+		console.log(this.props);
         return (
             <Fragment>
                 {
                     category === "dans"
                         ? <div className="category-page-hero" style={{ backgroundImage: `url(${DanceHero})` }} >
-                            <BackArrow transparent={true} />
+                            <BackArrow transparent={true} goBack={this.props.goBack} />
                             <h1>{this.Capitalize(category)}</h1>
                             <p>{this.Category(category)}</p>
                         </div>
                         : category === "film"
                             ? <div className="category-page-hero" style={{ backgroundImage: `url(${MovieHero})` }} >
-                                <BackArrow transparent={true} />
+                                <BackArrow transparent={true} goBack={this.props.goBack} />
                                 <h1>{this.Capitalize(category)}</h1>
                                 <p>{this.Category(category)}</p>
                             </div>
                             : category === "musik"
                                 ? <div className="category-page-hero" style={{ backgroundImage: `url(${MusicHero})` }} >
-                                    <BackArrow transparent={true} />
+                                    <BackArrow transparent={true} goBack={this.props.goBack} />
                                     <h1>{this.Capitalize(category)}</h1>
                                     <p>{this.Category(category)}</p>
                                 </div>
                                 : category === "teater"
                                     ? <div className="category-page-hero" style={{ backgroundImage: `url(${TheatreHero})` }} >
-                                        <BackArrow transparent={true} />
+                                        <BackArrow transparent={true} goBack={this.props.goBack} />
                                         <h1>{this.Capitalize(category)}</h1>
                                         <p>{this.Category(category)}</p>
                                     </div>
