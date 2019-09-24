@@ -6,11 +6,10 @@ import ContentContainer from '../ContentContainer';
 import ToggleProfile from '../ToggleProfile';
 import SoundCloudPlayer from '../SoundCloudPlayer';
 import videos from '../../data/youtube';
-import podcasts from '../../data/soundcloud';
 
 const PlayerContainer = ({content}) => {
 
-	const related = videos.slice(0, 5);
+	const related = videos.slice(0, 15);
 
     const [showInfo, setShowInfo] = useState(false);
 
@@ -25,7 +24,7 @@ const PlayerContainer = ({content}) => {
         <div className="player-container">
             {
                 video ? 
-                <YouTubePlayer content={content}/> : 
+                <YouTubePlayer id={content.id}/> : 
                 <SoundCloudPlayer
                     streamUrl={content.streamUrl}
                     trackTitle={content.title}

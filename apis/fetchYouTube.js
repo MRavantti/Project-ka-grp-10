@@ -32,19 +32,21 @@ const fetchYouTube = () => {
 							let shortDescription = snippet.description.substr(0, 30);
 							shortDescription = `${shortDescription}...`;
 
-							let title = snippet.title.split('-');
-							title = title[0];
-							title = title.split('–')
-							title = title[0];
+							let title = snippet.title.replace(/-.+/, '');
+							title = title.replace(/–.+/, '');
+							let longTitle = title;
+							title = title.replace(/:.+/, '');
+
 
                             const updateVideo = {
                                 id: video.id,
-                                title: snippet.title,
+								title: title,
+								longTitle: longTitle,
 								description: description,
 								shortDescription: shortDescription,
 								longDescription: longDescription,
                                 date: snippet.publishedAt,
-                                thumbnails: snippet.thumbnails,
+                                thumbnail: snippet.thumbnails.high.url,
                                 tags: snippet.tags,
                                 duration: formatDuration,
                                 type: 'video'

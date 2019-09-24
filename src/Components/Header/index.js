@@ -11,7 +11,7 @@ const Header = ({content}) => {
                 playerId: content.id
             }
         }}>
-            <div className="header" style={{backgroundImage: `url(${content.thumbnails.high.url})`}}>
+            <div className="header" style={{backgroundImage: `url(${content.thumbnail})`}}>
                 <p>Videoföreläsning</p>
                 <h1>{content.title}</h1>
                 <p>{content.description}</p>

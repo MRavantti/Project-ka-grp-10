@@ -25,11 +25,12 @@ const TextContainer = (props) => {
 
     return (
         <div className={`text-container ${props.size}`}>
-            {
-                props.info && showInteractive()
-            }
+			{props.info && showInteractive()}
+			
             <h5>{content.title}</h5>
-            <p>{props.size === "large" && content.description}</p>
+
+			<p>{props.size === "large" ? content.description : content.shortDescription}</p>
+
             {
                 props.player && !props.show && 
                 <div className="see-more-btn" onClick={props.toggle}>

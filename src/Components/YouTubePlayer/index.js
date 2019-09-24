@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 import YouTube from 'react-youtube';
 
-const YouTubePlayer = () => {
+const YouTubePlayer = ({id}) => {
 
-    const [height, setHeight] = useState(0);
+	const [height, setHeight] = useState(0);
+	
+	console.log(YouTube);
 
     useEffect(() => {
         const player = document.querySelector('.youtube-player');
@@ -24,7 +26,7 @@ const YouTubePlayer = () => {
     return (
         <div className="youtube-player">
             <YouTube
-                videoId="_BhiH3GG8pI"
+                videoId={id}
                 opts = {opts}
             />
         </div>
