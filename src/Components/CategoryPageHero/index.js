@@ -31,8 +31,8 @@ class CategoryPageHero extends Component {
     }
 
     render() {
-        const { category } = this.props
-		console.log(this.props);
+		const { category } = this.props
+		
         return (
             <Fragment>
                 {
