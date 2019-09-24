@@ -40,11 +40,6 @@ const SoundCloudPlayer = withCustomAudio(props => {
 
     return (
         <div className="soundcloud-player" style={{backgroundImage: `url(${props.content.thumbnail})`}}>
-			<PlayButton
-				onTogglePlay={togglePlay}
-				className="play-button"
-				// {...props}
-			/>
 			<div className="player">
 				<Progress
 					className="progress-container"
@@ -53,17 +48,25 @@ const SoundCloudPlayer = withCustomAudio(props => {
 					onSeekTrack={setCurrentTime}
 				/>
 				<div className="controls">
-					<PrevButton
-						onPrevClick={replay}
-						className="prev-button"
-						// {...props}
-					/>
+					<div className="control-buttons">
+						<PrevButton
+							onPrevClick={replay}
+							className="prev-button"
+							// {...props}
+						/>
+						<PlayButton
+							onTogglePlay={togglePlay}
+							className="play-button"
+							// {...props}
+						/>
+						<NextButton
+							onNextClick={forward}
+							className="next-button"
+							// {...props}
+						/>
+					</div>
+					<h4>{trackTitle}</h4>
 					<Timer {...props}/>
-					<NextButton
-						onNextClick={forward}
-						className="next-button"
-						// {...props}
-					/>
 				</div>
 			</div>
         </div>
