@@ -7,7 +7,8 @@ import StartPage from '../../Pages/StartPage';
 import CategoryPage from '../../Pages/CategoryPage';
 import PlayerPage from '../../Pages/PlayerPage';
 import RelatedPage from '../../Pages/RelatedPage';
-import CoursesPage from '../../Pages/CoursesPage.js';
+import CoursesPage from '../../Pages/CoursesPage';
+import ProfilePage from '../../Pages/ProfilePage';
 import Layout from '../Layout';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
 					<Route path="/player/:playerId" component={PlayerPage} />
 					<Route path="/related-courses" component={RelatedPage} />
 					<Route path="/courses" component={CoursesPage} />
+					<Route path="/profile" component={ProfilePage} />
 					{/* <Route component={NotFound}/> */}
 				</Switch>
 			</Layout>

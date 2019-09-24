@@ -15,9 +15,8 @@ const CoursesPage = (props) => {
         <Fragment>
             <CoursesPageHero />
             <ContentContainer size="large" text="Senast Innehåll" content={videos[0]} />
-            <ContentContainer size="small" type="video" text="Populära Videoföreläsningar" content={videos.slice(1, 16)} />            
-            <ContentContainer size="small" type="video" text="Populära Videoföreläsningar" content={videos.slice(1, 16)} />            
-
+            <ContentContainer size="small" type="video" text="Populära Videoföreläsningar" content={videos.slice(1, 16)} />
+            <ContentContainer size="small" type="video" text="Populära Videoföreläsningar" content={videos.slice(1, 16)} />
         </Fragment>
     );
 };
