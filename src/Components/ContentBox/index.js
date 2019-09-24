@@ -2,12 +2,22 @@ import React from 'react';
 import './style.css';
 import Thumbnail from '../Thumbnail';
 import TextContainer from '../TextContainer';
+import { Link } from 'react-router-dom';
 
 const ContentBox = (props) => {
+    const { content } = props;
+
     return (
         <div className={`content-box ${props.size}`}>
-            <Thumbnail type={props.type} size={props.size} date={props.date} img={props.img} />
-            <TextContainer type={props.type} size={props.size} info={props.info} header={props.header} text={props.text} info={props.info} />
+            <Link to={{
+                pathname: `/player/${content.id}`,
+                state: {
+                    playerId: content.id
+                }
+            }}>
+                <Thumbnail type={content.type} size={props.size} content={content} />
+                <TextContainer type={content.type} size={props.size} content={content} />
+            </Link>
         </div>
     );
 };
