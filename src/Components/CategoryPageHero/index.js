@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './CategoryPageHero.css'
-import BackButton from '../BackButton';
+import BackArrow from '../BackArrow';
 import MediaButtons from '../MediaCategoryButtons';
 
 import DanceHero from '../../Images/dance-hero.png'
@@ -38,25 +38,25 @@ class CategoryPageHero extends Component {
                 {
                     category === "dans"
                         ? <div className="category-page-hero" style={{ backgroundImage: `url(${DanceHero})` }} >
-                            <BackButton />
+                            <BackArrow transparent={true} />
                             <h1>{this.Capitalize(category)}</h1>
                             <p>{this.Category(category)}</p>
                         </div>
                         : category === "film"
                             ? <div className="category-page-hero" style={{ backgroundImage: `url(${MovieHero})` }} >
-                                <BackButton />
+                                <BackArrow transparent={true} />
                                 <h1>{this.Capitalize(category)}</h1>
                                 <p>{this.Category(category)}</p>
                             </div>
                             : category === "musik"
                                 ? <div className="category-page-hero" style={{ backgroundImage: `url(${MusicHero})` }} >
-                                    <BackButton />
+                                    <BackArrow transparent={true} />
                                     <h1>{this.Capitalize(category)}</h1>
                                     <p>{this.Category(category)}</p>
                                 </div>
                                 : category === "teater"
                                     ? <div className="category-page-hero" style={{ backgroundImage: `url(${TheatreHero})` }} >
-                                        <BackButton />
+                                        <BackArrow transparent={true} />
                                         <h1>{this.Capitalize(category)}</h1>
                                         <p>{this.Category(category)}</p>
                                     </div>
