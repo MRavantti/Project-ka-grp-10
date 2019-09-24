@@ -4,6 +4,8 @@ import Interact from '../Interact';
 
 const TextContainer = (props) => {
 
+	const { content } = props;
+
     const showInteractive = () => {
         if (props.player) {
             return (
@@ -26,8 +28,8 @@ const TextContainer = (props) => {
             {
                 props.info && showInteractive()
             }
-            <h5>Netflix Ambitions</h5>
-            <p>Netflix's Lina Broneus on the plans for the Nordic regions</p>
+            <h5>{content.title}</h5>
+            <p>{props.size === "large" && content.description}</p>
             {
                 props.player && !props.show && 
                 <div className="see-more-btn" onClick={props.toggle}>

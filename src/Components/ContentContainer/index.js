@@ -18,12 +18,12 @@ const ContentContainer = (props) => {
         return (
             <div className="content-container">
                 <SeeMore text={props.text} toggle={func}/>
-                <SlideShow type={props.type}/>
+                <SlideShow type={props.type} content={props.content.slice(0, 5)}/>
                 {
                     showMore && 
                     <Fragment>
-                        <SlideShow type={props.type}/>
-                        <SlideShow type={props.type}/>
+                        <SlideShow type={props.type} content={props.content.slice(5, 10)}/>
+                        <SlideShow type={props.type} content={props.content.slice(10, 15)}/>
                     </Fragment>
                 }
             </div>
@@ -32,8 +32,8 @@ const ContentContainer = (props) => {
 
     return (
         <div className="content-container">
-            <SeeMore text="Senast Innehåll" toggle={func}/>
-            <ContentBox size={props.size} type={props.type} info={props.info}/>
+            <SeeMore text="Senast Innehåll"/>
+            <ContentBox size={props.size} content={props.content}/>
         </div>
     );
 };

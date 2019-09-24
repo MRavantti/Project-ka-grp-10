@@ -15,20 +15,33 @@ const fetchSoundCloud = async () => {
     const data = await res.json();
     tracks = data.map((track) => {
 
-        // Removing everything behind -, – in title
+		// Removing everything behind -, – in title
+		// Two difference dashes, dont remove any of them
         let title = track.title.replace(/-.+/, '');
         title = title.replace(/–.+/, '');
 
         let imageUrl = track.artwork_url.replace(/(large)/, "t500x500");
 
         let tagList = track.tag_list.split(' ');
-        tagList = tagList.map(tag => tag.replace('"', ""));
+		tagList = tagList.map(tag => tag.replace('"', ""));
+		
+		let date = track.created_at.split('+');
+		date = date[0];
+
+		let description = track.description.split('.');
+		let longDescription = description.slice(0, 2);
+		description = description.slice(0, 1);
+
+		let shortDescription = track.description.slice(0, 20);
+		shortDescription = `${shortDescription}...`;
 
         const updatedTrack = {
             id: track.id,
             title: title,
-            description: track.description,
-            date: track.created_at,
+			description: description,
+			shortDescription: shortDescription,
+			longDescription: longDescription,
+            date: date,
             streamUrl: track.stream_url,
             duration: track.duration,
             thumbnail: imageUrl,
@@ -45,7 +58,7 @@ const fetchSoundCloud = async () => {
             return console.log(err);
         }
     })
-    console.log('SoundCloud data fetched and updated');
+	console.log('SoundCloud data fetched and updated');
 }
 
 module.exports = fetchSoundCloud;

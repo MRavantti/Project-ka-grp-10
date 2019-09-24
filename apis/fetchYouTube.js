@@ -15,21 +15,35 @@ const fetchYouTube = () => {
     fetch(`${fetchUrl}/search/?channelId=${channelId}&part=snippet&key=${apiKey}&maxResults=${maxResults}`)
         .then(res => res.json())
         .then(data => {
-            data.items.map((item) => {
+            data.items.map(item => {
                 fetch(`${fetchUrl}/videos?id=${item.id.videoId}&key=${apiKey}&part=contentDetails,snippet`)
                     .then(res => res.json())
                     .then(data => {
                         if (data.items.length > 0) {
                             const video = data.items[0];
-                            const snippet = video.snippet;
+							const snippet = video.snippet;
                             const durationInSeconds = durationFunction.YTDurationToSeconds(video.contentDetails.duration);
 							const formatDuration = durationFunction.formatDuration(durationInSeconds);
 							
+							let description = snippet.description.split('.');
+							let longDescription = description.slice(0, 2);
+							description = description.slice(0, 1);
+
+							let shortDescription = snippet.description.substr(0, 30);
+							shortDescription = `${shortDescription}...`;
+
+							let title = snippet.title.split('-');
+							title = title[0];
+							title = title.split('–')
+							title = title[0];
+
                             const updateVideo = {
                                 id: video.id,
                                 title: snippet.title,
-                                description: snippet.description,
-                                publishedAt: snippet.publishedAt,
+								description: description,
+								shortDescription: shortDescription,
+								longDescription: longDescription,
+                                date: snippet.publishedAt,
                                 thumbnails: snippet.thumbnails,
                                 tags: snippet.tags,
                                 duration: formatDuration,
@@ -48,7 +62,7 @@ const fetchYouTube = () => {
             })
         });
         
-    console.log('YouTube data fetched and updated');
+	console.log('YouTube data fetched and updated');
 }
 
 module.exports = fetchYouTube;

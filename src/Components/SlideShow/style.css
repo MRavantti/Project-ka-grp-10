@@ -1,5 +1,5 @@
 .carousel {
-    margin-right: 16px;
+	margin-right: 16px;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -9,16 +9,17 @@
     scroll-snap-type: mandatory;
     -webkit-scroll-snap-type: mandatory;
     -webkit-scroll-snap-points-x: repeat(100%);
-
+	
     scrollbar-width: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
 .carousel::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 .carousel > div {
+	vertical-align: top;
     position: relative;
     display: inline-block;
     margin-left: 16px;
