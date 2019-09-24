@@ -6,8 +6,6 @@ const YouTubePlayer = ({id}) => {
 
 	const [height, setHeight] = useState(0);
 	
-	console.log(YouTube);
-
     useEffect(() => {
         const player = document.querySelector('.youtube-player');
         let newHeight = player.scrollWidth/1.7778;

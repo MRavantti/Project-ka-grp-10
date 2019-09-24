@@ -27,9 +27,9 @@ const TextContainer = (props) => {
         <div className={`text-container ${props.size}`}>
 			{props.info && showInteractive()}
 			
-            <h5>{content.title}</h5>
+            <h5>{props.player ? content.longTitle : content.title}</h5>
 
-			<p>{props.size === "large" ? content.description : content.shortDescription}</p>
+			<p>{props.size === "large" ? (props.player ? content.longDescription : content.description) : content.shortDescription}</p>
 
             {
                 props.player && !props.show && 

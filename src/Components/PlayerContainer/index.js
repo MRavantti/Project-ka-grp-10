@@ -26,10 +26,11 @@ const PlayerContainer = ({content}) => {
                 video ? 
                 <YouTubePlayer id={content.id}/> : 
                 <SoundCloudPlayer
-                    streamUrl={content.streamUrl}
+                    streamUrl={content.url}
                     trackTitle={content.title}
                     preloadType="metadata"
-                    clientId={process.env.REACT_APP_SC_CLIENT_ID}
+					clientId={process.env.REACT_APP_SC_CLIENT_ID}
+					content={content}
                 />
             }
             <TextContainer size="large" info="Masterclass" player={true} toggle={toggle} show={showInfo} content={content}/>

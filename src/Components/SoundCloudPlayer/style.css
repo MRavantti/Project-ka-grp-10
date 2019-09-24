@@ -1,40 +1,56 @@
 .soundcloud-player {
     width: 100%;
-    height: 10vh;
-    background: grey;
+    height: 30vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: flex-end;
+}
+
+.player {
+	width: 100%;
+	background: #8973B8;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 8px 16px;
 }
 
-.soundcloud-player .progress {
+.player .progress {
     width: 100%;
-    height: 2vh;
-    color: white;
-    background: orange;
+	height: 10vh;
+	border-right: 2px solid black;
 }
 
-.progress > .controls {
-    width: 100%;
-    height: 100%;
+.progress-container {
+	display: flex;
+	align-items: center;
+	height: 20px;
 }
 
-.soundcloud-player > .controls {
+.progress-container:after {
+	top: 5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: "";
+	background: orange;
+}
+
+.player > .controls {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.soundcloud-player .control-buttons {
+.player .control-buttons {
     width: 30%;
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
 }
 
-.soundcloud-player .control-buttons button {
+.player .control-buttons button {
     min-width: 20px;
     min-height: 20px;
     border: none;
@@ -43,34 +59,34 @@
     margin: 0;
 }
 
-.soundcloud-player .control-buttons button svg {
+.player .control-buttons button svg {
     fill: white;
 }
 
-.soundcloud-player .control-buttons .prev-button {
-    background: url("/assets/svgs/replay-30.svg");
+.player .control-buttons .prev-button {
+    background: url("/assets/svgs/replay-10.svg");
     background-position: center;
     background-size: contain;
     background-repeat: none;
 }
-.soundcloud-player .control-buttons .next-button {
-    background: url("/assets/svgs/forward-30.svg");
+.player .control-buttons .next-button {
+    background: url("/assets/svgs/forward-10.svg");
     background-position: center;
     background-size: contain;
     background-repeat: none;
 }
 
-.soundcloud-player .control-buttons .play-button {
-    background: url("/assets/svgs/play.svg");
+.player .control-buttons .play-button {
+	background: url("/assets/svgs/play.svg");
     background-position: center;
     background-size: contain;
     background-repeat: none;
+}
+
+.player .control-buttons .play-button.playing {
+	background: url("/assets/svgs/pause.svg");
 }
 
 .prev-button > svg, .next-button > svg, .play-button > svg {
     display: none;
-}
-
-.progress-container {
-    border: 1px solid black;
 }
