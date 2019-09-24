@@ -11,7 +11,11 @@ const SoundCloudPlayer = withCustomAudio(props => {
 
     // console.log(audio.currentTime/audio.duration);
     // console.log(audio.currentTime);
-    
+	
+	const previous = () => {
+		audio.currentTime = 0;
+	}
+
     const replay = () => {
         audio.currentTime -= 10;
     }
@@ -54,15 +58,20 @@ const SoundCloudPlayer = withCustomAudio(props => {
 				/>
 				<div className="controls">
 					<PrevButton
-						onPrevClick={replay}
+						onPrevClick={previous}
 						className="prev-button"
-						// {...props}
 					/>
-					<Timer {...props}/>
+					<PrevButton
+						onPrevClick={replay}
+						className="replay-button"
+					/>
+					<Timer
+						className="timer"
+						{...props}
+					/>
 					<NextButton
 						onNextClick={forward}
-						className="next-button"
-						// {...props}
+						className="forward-button"
 					/>
 				</div>
 			</div>
