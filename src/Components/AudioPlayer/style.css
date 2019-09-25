@@ -21,13 +21,22 @@
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 10vh;
+	height: 12vh;
 	justify-content: space-around;
 	background: #8973B8;
-	padding: 0;
+	padding: 8px 0;
 }
 
-.audio-player.small p {
+.audio-player.small .player-info {
+	width: 100%;
+	padding: 0 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.audio-player.small .player-info p {
 	color: #fff;
 }
 
@@ -36,6 +45,11 @@
     display: flex;
     flex-direction: column;
 	justify-content: space-between;
+}
+
+.audio-player .player-container {
+	height: 7vh;
+	justify-content: space-around;
 }
 
 .audio-player.medium .player-container .player-controls {

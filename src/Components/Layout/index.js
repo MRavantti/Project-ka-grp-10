@@ -13,8 +13,8 @@ const Layout = ({location, children}) => {
 
 	let content;
 	let playerSize;
-
-	if (location.pathname.includes('player')) {
+	
+	if (location.pathname.includes('player') && podcasts.find(item => item.id == location.state.playerId)) {
 		content = podcasts.filter(item => item.id == location.state.playerId);
 		content = content[0];
 		playerSize = "medium";
@@ -23,7 +23,21 @@ const Layout = ({location, children}) => {
 		id = id[4];
 		content = podcasts.filter(item => item.id == id);
 		playerSize = "small";
-		
+	}
+
+	const toggleFullscreen = (e) => {
+		if (e.target.src) {
+			if (e.target.src.includes('cross.svg')) {
+				closePlayer();
+				return;
+			}
+		}
+		playerSize = "large";
+		console.log(playerSize);
+	}
+
+	const closePlayer = () => {
+		setAudioUrl(null);
 	}
 
     return (
@@ -31,6 +45,7 @@ const Layout = ({location, children}) => {
             <Navbar/>
 			{ content &&
 				<AudioPlayer
+						toggleFullscreen={toggleFullscreen}
 						size={playerSize}
 						streamUrl={content.url}
 						trackTitle={content.title}
@@ -41,7 +56,7 @@ const Layout = ({location, children}) => {
 			}
             {children}
             <CoursesBox/>
-            <Footer/>
+            <Footer player={audioUrl} location={location}/>
         </div>
     );
 };

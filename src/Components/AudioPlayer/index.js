@@ -66,9 +66,15 @@ const AudioPlayer = withCustomAudio(props => {
 		duration = durationMinutes.toString().padStart(2, '0') + ':' + durationSeconds.toString().padStart(2, '0');
 	}
 
+
     return (
         <div className={`audio-player ${props.size}`} style={{backgroundImage: `url(${props.content.thumbnail})`}}>
-			{props.size === "small" && <p>Nu spelas: {title}</p>}
+			{props.size === "small" && 
+			<div className="player-info" onClick={props.toggleFullscreen}>
+				<p>Nu spelas: {title}</p>
+				<img src="/assets/svgs/up-arrow-white.svg" alt="up arrow icon"/>
+				<img onClick={props.closePlayer} src="/assets/svgs/cross.svg" alt="cross icon"/>
+			</div>}
 			{props.size === "medium" && 
 			<PlayButton
 				onTogglePlay={togglePlay}

@@ -4,7 +4,6 @@ import YouTubePlayer from '../YouTubePlayer';
 import TextContainer from '../TextContainer';
 import ContentContainer from '../ContentContainer';
 import ToggleProfile from '../ToggleProfile';
-import SoundCloudPlayer from '../SoundCloudPlayer';
 import videos from '../../data/youtube';
 import podcasts from '../../data/youtube';
 import { AudioPlayerContext } from '../../contexts/AudioPlayerContext';

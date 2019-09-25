@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './style.css';
 import YouTube from 'react-youtube';
+import { AudioPlayerContext } from '../../contexts/AudioPlayerContext';
 
 const YouTubePlayer = ({id}) => {
 
-	const [height, setHeight] = useState(0);
+    const { audioUrl, setAudioUrl } = useContext(AudioPlayerContext);
+
+    const [height, setHeight] = useState(0);
+    
+    const stopAudio = () => {
+        setAudioUrl(null);
+    }
 	
     useEffect(() => {
         const player = document.querySelector('.youtube-player');
@@ -26,6 +33,7 @@ const YouTubePlayer = ({id}) => {
             <YouTube
                 videoId={id}
                 opts = {opts}
+                onPlay={stopAudio}
             />
         </div>
     );
