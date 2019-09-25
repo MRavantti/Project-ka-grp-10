@@ -11,10 +11,10 @@ const CategoryPage = (props) => {
 
     return (
         <Fragment>
-            <CategoryPageHero category={category} goBack={props.history.goBack}/>
-            <ContentContainer size="small" text="Senaste Podcasts" content={podcasts.slice(20, 35)}/>
-            <ContentContainer size="small" text="Senaste Videoföreläsningar" content={videos.slice(5, 20)}/>
-            <ContentContainer size="small" text="Kategori Namn" content={podcasts.slice(50, 65)}/>
+            <CategoryPageHero category={category} />
+            <ContentContainer size="small" text="Senaste Podcasts" content={podcasts.slice(50, 65)}/>
+            <ContentContainer size="small" text="Senaste Videoföreläsningar" content={videos.slice(1, 16)}/>
+            <ContentContainer size="small" text="Kategori Namn" content={podcasts.slice(65, 80)}/>
         </Fragment>
     );
 };
