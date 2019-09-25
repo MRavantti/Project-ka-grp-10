@@ -5,11 +5,13 @@ import './style.css';
 import { AudioPlayerContext } from '../../contexts/AudioPlayerContext';
 
 
-const SoundCloudPlayer = withCustomAudio(props => {
+const AudioPlayer = withCustomAudio(props => {
     const { soundCloudAudio, trackTitle } = props;
 	const audio = soundCloudAudio.audio;
 
 	const { audioUrl, setAudioUrl} = useContext(AudioPlayerContext);
+
+	console.log(props);
 
     // console.log(audio.currentTime/audio.duration);
 	// console.log(audio.currentTime);
@@ -47,40 +49,60 @@ const SoundCloudPlayer = withCustomAudio(props => {
 	}
 
     return (
-        <div className="soundcloud-player" style={{backgroundImage: `url(${props.content.thumbnail})`}}>
+        <div className={`audio-player ${props.size}`} style={{backgroundImage: `url(${props.content.thumbnail})`}}>
+			{props.size === "medium" && 
 			<PlayButton
 				onTogglePlay={togglePlay}
 				className="play-button"
 				// {...props}
-			/>
-			<div className="player">
+			/>}
+			
+			<div className="player-container">
 				<Progress
 					className="progress-container"
 					innerClassName="progress"
 					value={(audio.currentTime/audio.duration)*100}
 					onSeekTrack={setCurrentTime}
 				/>
-				<div className="controls">
+				
+				<div className="player-controls">
 					<PrevButton
 						onPrevClick={previous}
-						className="prev-button"
+						className="previous-button"
 					/>
+					
 					<PrevButton
 						onPrevClick={replay}
 						className="replay-button"
 					/>
+					
+					{props.size === "small" && 
+					<PlayButton
+						onTogglePlay={togglePlay}
+						className="play-button"
+					/>}
+					
+					{props.size === "medium" && 
 					<Timer
 						className="timer"
 						{...props}
-					/>
+					/>}
+					
 					<NextButton
 						onNextClick={forward}
 						className="forward-button"
 					/>
+					
+					{props.size === "small" &&
+					<Timer
+						className="timer"
+						{...props}
+					/>}
+					
 				</div>
 			</div>
         </div>
     );
 });
 
-export default SoundCloudPlayer;
+export default AudioPlayer;

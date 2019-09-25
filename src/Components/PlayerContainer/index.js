@@ -6,32 +6,29 @@ import ContentContainer from '../ContentContainer';
 import ToggleProfile from '../ToggleProfile';
 import SoundCloudPlayer from '../SoundCloudPlayer';
 import videos from '../../data/youtube';
+import podcasts from '../../data/youtube';
+import { AudioPlayerContext } from '../../contexts/AudioPlayerContext';
 
 const PlayerContainer = ({content}) => {
+	
+	const { audioUrl, setAudioUrl } = AudioPlayerContext;
+	
+	let video = content.type === "video" ? true : false;
 
-	const related = videos.slice(0, 15);
+	const related = video ? videos.slice(0, 15) : podcasts.slice(0, 15);
 
     const [showInfo, setShowInfo] = useState(false);
 
-	let video = content.type === "video" ? true : false;
-
     const toggle = () => {
-        console.log('click');
         setShowInfo(!showInfo);
-    }
+	}
+	
 
     return (
-        <div className="player-container">
+        <div className={`player-container ${content.type}`}>
             {
-                video ? 
-                <YouTubePlayer id={content.id}/> : 
-                <SoundCloudPlayer
-                    streamUrl={content.url}
-                    trackTitle={content.title}
-                    preloadType="metadata"
-					clientId={process.env.REACT_APP_SC_CLIENT_ID}
-					content={content}
-                />
+                video &&
+				<YouTubePlayer id={content.id}/>
             }
             <TextContainer size="large" info="Masterclass" player={true} toggle={toggle} show={showInfo} content={content}/>
             {

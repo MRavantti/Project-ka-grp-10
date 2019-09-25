@@ -1,0 +1,143 @@
+.audio-player {
+	position: absolute;
+    width: 100%;
+	height: 30vh;
+	padding-top: 10vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 5;
+}
+
+.audio-player.medium {
+	top: 0;
+	margin-top: 17vh;
+}
+
+.audio-player.small {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 10vh;
+	justify-content: space-around;
+	background: #8973B8;
+}
+
+.audio-player .player-container {
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+}
+
+.audio-player.medium .player-container .player-controls {
+	padding: 0 88px 0 16px;
+	height: 50px;
+	background: #8973B8;
+}
+
+.audio-player .player-container .progress {
+	width: 100%;
+	height: 100%;
+	border-right: 3px solid #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.audio-player .progress-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 17px;
+}
+
+.audio-player .progress-container:after {
+	background: rgba(255, 255, 255, 0.35);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 7px;
+	content: "";
+}
+
+.audio-player .player-container > .player-controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audio-player button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.audio-player .player-container button svg {
+    fill: white;
+}
+
+.audio-player .player-container button {
+	width: 24px;
+	height: 24px;
+}
+
+.audio-player .player-container .prev-button {
+    background: url("/assets/svgs/previous.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.audio-player .player-container .replay-button {
+    background: url("/assets/svgs/replay-10.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.audio-player .player-container .forward-button {
+    background: url("/assets/svgs/forward-10.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.audio-player .play-button {
+	background: url("/assets/svgs/play-big.svg");
+    background-position: center;
+    background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.audio-player .play-button.playing {
+	background: url("/assets/svgs/pause.svg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.prev-button > svg, .replay-button > svg, .forward-button > svg, .play-button > svg {
+    display: none;
+}
+
+.audio-player .play-button {
+	min-width: 64px;
+	min-height: 64px;
+}
+
+.audio-player .play-button.playing {
+	min-width: 64px;
+	min-height: 64px;
+}
+
+.audio-player .timer {
+	color: #fff;
+}
