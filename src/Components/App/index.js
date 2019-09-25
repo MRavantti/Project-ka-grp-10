@@ -8,6 +8,7 @@ import CategoryPage from '../../Pages/CategoryPage';
 import PlayerPage from '../../Pages/PlayerPage';
 import Layout from '../Layout';
 import { AudioPlayerContext } from '../../contexts/AudioPlayerContext';
+import ScrollToTop from "../../functions/scrollToTop";
 
 const App = () => {
 	
@@ -15,6 +16,7 @@ const App = () => {
 
 	return (
 		<Router>
+			<ScrollToTop/>
 			<AudioPlayerContext.Provider
 				value={{ audioUrl, setAudioUrl }}>
 				<Layout>
