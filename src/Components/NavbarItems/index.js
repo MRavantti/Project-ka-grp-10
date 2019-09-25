@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-import SearchIcon from '../../Images/icon.png';
-import Logo from '../../Images/logo.png';
-import BurgerIcon from '../../Images/burger-menu.png';
+import SearchIcon from '../../Images/search.svg';
+import Logo from '../../Images/k-play.svg';
+import BurgerIcon from '../../Images/mobile-burger.svg';
 
 export class NavbarItems extends Component {
     render() {
