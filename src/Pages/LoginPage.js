@@ -9,7 +9,7 @@ const LoginPage = (props) => {
             <LoginForm />
             <div className="line" />
             <FacebookLoginButton />
-            <p>Inte medlem? <Link to="registration">Registrera dig här</Link></p>
+            <p className="cta-register">Inte medlem? <Link to="registration" ><span className="register-link">Registrera dig här</span></Link></p>
         </Fragment>
     );
 }
