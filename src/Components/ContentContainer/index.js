@@ -19,7 +19,7 @@ const ContentContainer = (props) => {
                 <SeeMore text={props.text} toggle={func}/>
                 <SlideShow type={props.type} content={props.content.slice(0, 5)}/>
                 {
-                    showMore && 
+                    showMore &&
                     <Fragment>
                         <SlideShow type={props.type} content={props.content.slice(5, 10)}/>
                         <SlideShow type={props.type} content={props.content.slice(10, 15)}/>

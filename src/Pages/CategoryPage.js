@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import CategoryPageHero from '../Components/CategoryPageHero';
 import ContentContainer from '../Components/ContentContainer';
-import videos from '../data/youtube.json';
-import podcasts from '../data/soundcloud.json';
+
+import videos from '../data/youtube';
+import podcasts from '../data/soundcloud';
 
 const CategoryPage = (props) => {
 

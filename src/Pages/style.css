@@ -1,0 +1,19 @@
+.course-leader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.course-leader h3 {
+    font-size: 16px;
+    margin: 0 12px 0 16px;
+}
+
+.course-leader p {
+    font-size: 12px;
+}
+
+.course-leader h3,
+.course-leader p {
+    text-align: center;
+}

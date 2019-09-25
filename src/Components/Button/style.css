@@ -1,6 +1,6 @@
 .button {
     height: 24px;
-    padding: 0 24px;
+    padding: 0 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,7 @@
     background: #ED7D4C;
     text-align: center;
     width: fit-content;
+    margin: 17px;
 }
 
 .button a {
