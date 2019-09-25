@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import './LoginForm.css';
 import EmailIcon from '../../Images/email-icon.svg'
 import KeyIcon from '../../Images/key-icon.svg'
+
 const LoginForm = (props) => {
     return (
         <Fragment>
@@ -11,15 +12,16 @@ const LoginForm = (props) => {
                     <div className="icon">
                         <img src={EmailIcon} />
                     </div>
-                    <input type="text" name="email" placeholder="E-Mail" />
+                    <input className="input-login" type="text" name="email" placeholder="E-Mail" />
                 </div>
 
                 <div className="input-field">
                     <div className="icon">
                         <img src={KeyIcon} />
                     </div>
-                    <input type="password" name="password" placeholder="Lösenord" />
+                    <input className="input-login" type="password" name="password" placeholder="Lösenord" />
                 </div>
+                <input className="login-button" type="submit" name="submit" value="logga in"/>
             </form>
         </Fragment>
     );

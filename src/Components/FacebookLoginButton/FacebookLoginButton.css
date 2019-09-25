@@ -1,0 +1,23 @@
+.facebook-login {
+    background-color: #3D5A98;
+    height: 43px;
+    width: 94vw;
+    margin: 30px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 7px;
+    padding-top: 5px;
+}
+
+.facebook-login img{
+    margin-right: 20px;
+    max-width: 30xp;
+    max-height: 30px;
+}

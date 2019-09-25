@@ -5,12 +5,10 @@
     align-items: center;
 }
 
-.login-form input {
+.input-login {
     height: 43px;
     background-color: #F4F4F4;
     width: 80vw;
-    border: none;
-    outline: none;
 }
 
 .icon {
@@ -42,4 +40,21 @@
     font-weight: normal;
     text-align: center;
     margin-top: 40px;
+}
+
+.login-button {
+    width: 100px;
+    height: 43px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #81AA3D;
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+}
+
+input {
+    border: none;
+    outline: none;
 }
