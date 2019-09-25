@@ -24,4 +24,5 @@ yarn-error.log*
 
 .editorconfig
 .env
-src/data
+src/data/soundcloud.json
+src/data/youtube.json
