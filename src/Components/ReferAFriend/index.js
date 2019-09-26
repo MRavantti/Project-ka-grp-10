@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import './ReferAFriend.css';
 
-import ForwardArrow from '../../Images/forward-arrow.svg'
-
 const ReferAFriend = (props) => {
     return (
         <Fragment>
@@ -14,7 +12,7 @@ const ReferAFriend = (props) => {
                     <input className="refer-friend-button" type="submit" name="submit" value="Fortsätt" onClick={props.changeState} />
                 </form>
                 <div className="skip-this-step-button" onClick={props.changeState}>
-                <p>Skippa det här steget</p><img src={ForwardArrow}/>
+                    <p>Skippa det här steget</p><img src="/assets/svgs/forward-arrow" />
                 </div>
             </div>
         </Fragment>

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import ContentBox from '../Components/ContentBox';
 import CategoryMenu from '../Components/CategoryMenu';
-import Header from '../Components/Header';
+import Hero from '../Components/Hero';
 import SeeMore from '../Components/SeeMore';
 import SlideShow from '../Components/SlideShow';
 import ContentContainer from '../Components/ContentContainer';
@@ -13,10 +13,10 @@ const StartPage = () => {
     return (
         <Fragment>
             <CategoryMenu/>
-            <Header content={videos[20]}/>
-            <ContentContainer size="large" text="Senast Innehåll" content={videos[0]}/>
+            <Hero content={videos[20]}/>
+            <ContentContainer size="large" text="Senast Innehåll" content={videos[0]} image="/assets/images/talking-man.jpg"/>
             <ContentContainer size="small" text="Populära Videoföreläsningar" content={videos.slice(1, 16)}/>
-            <ContentContainer size="large" text="Nytt Podcastavsnitt" info="Podcast-avsnitt" content={podcasts[0]}/>
+            <ContentContainer size="large" text="Nytt Podcastavsnitt" info="Podcast-avsnitt" content={podcasts[0]} image="/assets/images/talking-woman.jpg"/>
             <ContentContainer size="small" text="Populära Podcasts" content={podcasts.slice(1, 16)}/>
         </Fragment>
     );

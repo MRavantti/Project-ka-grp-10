@@ -15,7 +15,7 @@ const ContentBox = (props) => {
 					playerId: content.id
 				}
 			}}>
-				<Thumbnail  type={content.type} size={props.size} content={content}/>
+				<Thumbnail  type={content.type} size={props.size} content={content} image={props.image}/>
 				<TextContainer type={content.type} size={props.size} content={content}/>
 			</Link>
 		</div>

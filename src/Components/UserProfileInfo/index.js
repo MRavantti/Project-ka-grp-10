@@ -1,15 +1,13 @@
 import React, { Fragment } from 'react';
 import './UserProfileInfo.css';
-import Button from '../Button';
 import EditButton from '../EditButton';
-import ProfileImg from '../../Images/elsa-johansson.png'
 
 const UserProfileInfo = (props) => {
     return (
         <Fragment>
             <div className="profile">
                 <div className="profile-info">
-                    <img src={ProfileImg} alt="profile" />
+                    <img src="/assets/svgs/elsa-johansson.svg" alt="profile" />
                     <div className="profile-text">
                         <div>
                             <h3>Elsa Johansson</h3>

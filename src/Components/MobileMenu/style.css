@@ -5,32 +5,45 @@
     flex-direction: column;
     align-items: center;
     top: 0;
-    height: auto;
-    width: 100vw;
+    height: fit-content;
+    width: 100%;
     background-color: #ED7D4C;
+    padding: 16px 16px 16px 61px;
     z-index: 1;
     color: #fff;
 }
 
 .cross-icon {
     position: absolute;
+    top: 0;
+    margin-top: 16px;
     right: 0;
-    width: 55px;
-    height: 55px;
+    margin-right: 16px;
+    width: 36px;
+    height: 36px;
 }
 
 .mobile-menu-top {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 78px
 }
 
 .mobile-menu-top p {
-    margin: 19px 0 22px 0;
+    font-size: 16px;
+    margin: 12px 90px 16px 0;
 }
 
 .mobile-menu-middle {
-    margin-bottom: 22px;
+    /* margin-bottom: 22px; */
+}
+
+.mobile-menu-middle a {
+	color: #fff;
+	text-decoration: none;
 }
 
 .mobile-menu-middle div img,
@@ -48,8 +61,12 @@
     margin-bottom: 19px;
     max-height: 35.2px;
     font-size: 24px;
-    width: 100vw;
-    margin-left: 120px;
+}
+
+.mobile-menu-middle div img,
+.mobile-menu-bottom div img {
+    margin-right: 12px;
+    width: 24px;
 }
 
 .border-line {
@@ -57,4 +74,18 @@
     height: 1px;
     width: 290px;
     margin-bottom: 22px;
+}
+
+.mobile-menu-bottom a {
+	color: #fff;
+    text-decoration: none;
+    
+}
+
+.mobile-menu-bottom,
+.mobile-menu-middle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px; 
 }

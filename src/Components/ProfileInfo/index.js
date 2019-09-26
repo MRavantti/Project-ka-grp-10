@@ -16,8 +16,8 @@ const ProfileInfo = (props) => {
                 </div>
             </div>
             <div className="profile-buttons">
-                <Button text="Videoföreläsningar"/>
-                <Button text="Kurser & seminarier"/>
+                <Button text="Videoföreläsningar" link="/profile"/>
+                <Button text="Kurser & seminarier" link="/courses"/>
             </div>
             <div className="toggle">
                 <img src="/assets/svgs/up-arrow.svg" alt="arrow up icon" onClick={props.toggle}/>

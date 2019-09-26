@@ -1,11 +1,6 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css'
-
-import CrossIcon from '../../Images/cross.svg';
-import ProfileIcon from '../../Images/profile-icon.svg';
-import ContactIcon from '../../Images/contact-icon.svg';
-import AboutIcon from '../../Images/info-icon.svg';
-
 
 export class MobileMenu extends Component {
 
@@ -16,43 +11,42 @@ export class MobileMenu extends Component {
                 <div className="mobile-menu">
 
                     <div className="mobile-menu-top">
-                        <p className="mobile-title">KATEGORIER</p>
-                        <img onClick={toggleMenu} className="cross-icon" src={CrossIcon} alt="cross icon" />
+                        <p>KATEGORIER</p>
                     </div>
+					<img onClick={toggleMenu} className="cross-icon" src="/assets/svgs/cross.svg" alt="cross icon" />
 
-                    <div className="border-line" />
+					<div className="border-line" />
 
                     <div className="mobile-menu-middle">
-                        <div className="dance-item">
+                        <Link to="/category/dans" onClick={toggleMenu}><div className="dance-item">
                             <p>Dans</p>
-                        </div>
-                        <div className="movie-item">
+                        </div></Link>
+                        <Link to="/category/film" onClick={toggleMenu}><div className="movie-item">
                             <p>Film</p>
-                        </div>
-                        <div className="music-item">
+                        </div></Link>
+                        <Link to="/category/musik" onClick={toggleMenu}><div className="music-item">
                             <p>Musik</p>
-                        </div>
-                        <div className="theatre-item">
+                        </div></Link>
+                        <Link to="/category/teater" onClick={toggleMenu}><div className="theatre-item">
                             <p>Teater</p>
-                        </div>
+                        </div></Link>
                     </div>
 
                     <div className="border-line" />
                     
                     <div className="mobile-menu-bottom">
-                        <div className="profile-item">
-                            <img src={ProfileIcon} alt="profile icon" />
+                        <Link to="/profile" onClick={toggleMenu}><div className="profile-item">
+                            <img src="/assets/svgs/person.svg" alt="profile icon" />
                             <p>Min profil</p>
-                            
-                        </div>
-                        <div className="contact-item">
-                            <img src={ContactIcon} alt="contact icon" />
+                        </div></Link>
+                        <a href="mailto:info@kulturakademin.com"><div className="contact-item">
+                            <img src="/assets/svgs/contact.svg" alt="contact icon" />
                             <p>Kontakt</p>
-                        </div>
-                        <div className="about-item">
-                            <img src={AboutIcon} alt="about icon" />
+                        </div></a>
+                        <a href="https://www.kulturakademin.com"><div className="about-item">
+                            <img src="/assets/svgs/info-icon.svg" alt="about icon" />
                             <p>Kulturakademin</p>
-                        </div>
+                        </div></a>
                     </div>
                     
                 </div>

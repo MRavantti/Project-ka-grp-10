@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 import './LoginForm.css';
-import EmailIcon from '../../Images/email-icon.svg'
-import KeyIcon from '../../Images/key-icon.svg'
 
 const LoginForm = (props) => {
     return (
@@ -10,14 +8,14 @@ const LoginForm = (props) => {
             <form className="login-form" >
                 <div className="input-field">
                     <div className="icon">
-                        <img src={EmailIcon} />
+                        <img src="/assets/svgs/email-icon.svg" />
                     </div>
                     <input className="input-login" type="text" name="email" placeholder="E-Mail" />
                 </div>
 
                 <div className="input-field">
                     <div className="icon">
-                        <img src={KeyIcon} />
+                        <img src="/assets/svgs/key-icon.svg" />
                     </div>
                     <input className="input-login" type="password" name="password" placeholder="Lösenord" />
                 </div>
