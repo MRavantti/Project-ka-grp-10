@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
-
+import RegistrationForm from '../Components/RegistrationForm';
+import RegistrationProgressionCheck from '../Components/RegistrationProgressionCheck'
 const RegistrationPage = (props) => {
     return (
         <Fragment>
-            <h1>Registera dig</h1>
+            <RegistrationProgressionCheck />
+            <RegistrationForm />
         </Fragment>
     );
 };
