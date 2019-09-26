@@ -1,5 +1,9 @@
 .mobile-menu {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     top: 0;
     height: fit-content;
     width: 100%;
@@ -22,7 +26,7 @@
 .mobile-menu-top {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
     margin-left: 78px
@@ -30,7 +34,7 @@
 
 .mobile-menu-top p {
     font-size: 16px;
-    margin: 12px 0 16px 0;
+    margin: 12px 90px 16px 0;
 }
 
 .mobile-menu-middle {
@@ -40,6 +44,12 @@
 .mobile-menu-middle a {
 	color: #fff;
 	text-decoration: none;
+}
+
+.mobile-menu-middle div img,
+.mobile-menu-bottom div img {
+    margin-right: 22px;
+    width: 24px;
 }
 
 .mobile-menu-middle div,
@@ -62,11 +72,20 @@
 .border-line {
     background-color: #fff;
     height: 1px;
-    width: 253px;
+    width: 290px;
     margin-bottom: 22px;
 }
 
 .mobile-menu-bottom a {
 	color: #fff;
-	text-decoration: none;
+    text-decoration: none;
+    
+}
+
+.mobile-menu-bottom,
+.mobile-menu-middle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px; 
 }

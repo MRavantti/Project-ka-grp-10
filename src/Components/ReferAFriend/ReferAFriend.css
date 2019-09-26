@@ -1,0 +1,60 @@
+.refer-friend-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.refer-friend-text {
+    max-width: 79vw;
+    margin-top: 60px;
+}
+
+.refer-friend {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.refer-friend form {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+
+}
+
+.input-refer-friend-email {
+    height: 43px;
+    background-color: #F4F4F4;
+    width: 70vw;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 8px;
+    margin-left: 16px;
+    padding-left: 17px;
+    color: #313131
+}
+
+.refer-friend-button {
+    width: 100px;
+    height: 43px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #81AA3D;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 16px;
+}
+
+.skip-this-step-button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+}
+
+.skip-this-step-button p {
+    margin-right: 5px;
+}

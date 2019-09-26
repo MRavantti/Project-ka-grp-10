@@ -17,3 +17,14 @@
 .course-leader p {
     text-align: center;
 }
+
+.cta-register,
+.register-link {
+    width: 100vw;
+    text-align: center;
+    color: #313131;
+    opacity: .6;
+}
+.register-link {
+    font-weight: bold
+}
