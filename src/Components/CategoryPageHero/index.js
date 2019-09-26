@@ -56,7 +56,7 @@ class CategoryPageHero extends Component {
                                     </div>
                                     : null
                 }
-                <MediaButtons />
+                <MediaButtons filterFunc={this.props.filterFunc} filter={this.props.filter}/>
             </Fragment>
         )
     }

@@ -11,7 +11,7 @@ const YouTubePlayer = ({id}) => {
     
     const stopAudio = () => {
         setAudioUrl(null);
-    }
+	}
 	
     useEffect(() => {
         const player = document.querySelector('.youtube-player');

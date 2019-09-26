@@ -4,13 +4,9 @@ import './MediaCategoryButton.css'
 
 const MediaCategoryButton = (props) => {
     return (
-        <div className={props.className}>
-            <Link to="link">
-                <button style={{backgroundColor: `${props.backgroundColor}`}}>
-                    <img className="media-icon" src={`/assets/svgs/${props.text === "Videor" ? "video.svg" : "podcast.svg"}`} alt="media icon" />
-                    {props.text}
-                </button>
-                </Link>
+        <div className={`category-button ${props.className}`} onClick={props.filterFunc} style={{backgroundColor: `${props.backgroundColor}`}}>
+			<img className="media-icon" src={`/assets/svgs/${props.text === "Videor" ? "video" : "podcast"}.svg`} alt="media icon" />
+			{props.text}
         </div>
     )
 }

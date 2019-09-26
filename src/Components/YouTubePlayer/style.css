@@ -1,0 +1,17 @@
+.youtube-player {
+	position: relative;
+	height: 0;
+	width: 100%;
+	padding-bottom: 62.25%;
+}
+
+.youtube-player div {
+	/* height: 0; */
+}
+.youtube-player iframe {
+	position: relative;
+	top: 0;
+	left: 0;
+	/* width: 100%;
+	height: 100%; */
+}

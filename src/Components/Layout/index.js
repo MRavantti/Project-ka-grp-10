@@ -42,7 +42,7 @@ const Layout = ({location, children}) => {
 
     return (
         <div className="layout">
-            <Navbar/>
+            <Navbar location={location}/>
 			{ content &&
 				<AudioPlayer
 						toggleFullscreen={toggleFullscreen}
