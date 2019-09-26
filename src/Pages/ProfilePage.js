@@ -1,17 +1,19 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import BackArrow from '../Components/BackArrow';
 import UserProfileInfo from '../Components/UserProfileInfo';
 import videos from '../data/youtube.json';
-import ContentContainer from '../Components/ContentContainer'
-import { Redirect } from 'react-router-dom'
+import ContentContainer from '../Components/ContentContainer';
+import { Redirect } from 'react-router-dom';
+import { LoggedInContext } from '../contexts/LoggedInContext';
 
 const ProfilePage = (props) => {
-    console.log(props.value);
+
+	const { isLoggedIn, setIsLoggedIn } = useContext(LoggedInContext);
     
     return (
         <Fragment>
             {
-                !props.isLoggedIn
+                isLoggedIn
                     ? <Fragment>
                         <BackArrow transparent={false} />
                         <div className="profile-top">
