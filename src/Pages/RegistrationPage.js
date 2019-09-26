@@ -3,11 +3,14 @@ import RegistrationForm from '../Components/RegistrationForm';
 import RegistrationProgressionCheck from '../Components/RegistrationProgressionCheck';
 import ReferAFriend from '../Components/ReferAFriend';
 import FinalizeRegistration from '../Components/FinalizeRegistration';
+import { Redirect } from 'react-router-dom';
+import { LoggedInContext } from '../contexts/LoggedInContext';
 
 class RegistrationPage extends Component {
     state = {
         progression: "1"
     }
+
 
     ChangeCurrentState = (e) => {
         if (this.state.progression === "1") {
