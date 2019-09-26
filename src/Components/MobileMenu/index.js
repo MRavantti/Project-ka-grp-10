@@ -6,9 +6,10 @@ export class MobileMenu extends Component {
 
     render() {
         const { toggleMenu } = this.props
+		const { myClass } = this.props
         return (
             <Fragment>
-                <div className="mobile-menu">
+                <div className={`mobile-menu ${myClass}`}>
 
                     <div className="mobile-menu-top">
                         <p>KATEGORIER</p>

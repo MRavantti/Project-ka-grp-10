@@ -4,19 +4,25 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    top: 0;
+    align-items: flex-start;
+	top: 0;
+	margin-top: -80vh;
     height: fit-content;
     width: 100%;
     background-color: #ED7D4C;
-    padding: 0 16px 0 61px;
-    color: #fff;
+    padding: 24px 16px 24px 60px;
+	color: #fff;
+	transition: transform 1.2s ease-in-out;
+}
+
+.mobile-menu.visible {
+	transform: translateY(80vh);
 }
 
 .mobile-menu .cross-icon {
     position: absolute;
     top: 0;
-    margin-top: 18px;
+    margin-top: 20px;
     right: 0;
     margin-right: 16px;
     width: 36px;
@@ -29,16 +35,13 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-	padding: 28px 0 32px 78px;
+	padding-bottom: 20px;
+	line-height: 36px;
 }
 
 .mobile-menu-top p {
     font-size: 16px;
     /* margin: 12px 0 16px 0; */
-}
-
-.mobile-menu-middle {
-    /* margin-bottom: 22px; */
 }
 
 .mobile-menu-middle a {
@@ -87,5 +90,4 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 40px; 
 }
