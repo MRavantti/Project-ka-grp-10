@@ -12,7 +12,7 @@ const ReferAFriend = (props) => {
                     <input className="refer-friend-button" type="submit" name="submit" value="Fortsätt" onClick={props.changeState} />
                 </form>
                 <div className="skip-this-step-button" onClick={props.changeState}>
-                    <p>Skippa det här steget</p><img src="/assets/svgs/forward-arrow" />
+                    <p>Skippa det här steget</p><img src="/assets/svgs/forward-arrow.svg" />
                 </div>
             </div>
         </Fragment>
