@@ -3,11 +3,6 @@ import './CategoryPageHero.css'
 import BackArrow from '../BackArrow';
 import MediaButtons from '../MediaCategoryButtons';
 
-import DanceHero from '../../Images/dance-hero.png'
-import MovieHero from '../../Images/movie-hero.png'
-import MusicHero from '../../Images/music-hero.png'
-import TheatreHero from '../../Images/theatre-hero.png'
-
 class CategoryPageHero extends Component {
     Capitalize(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
@@ -30,6 +25,7 @@ class CategoryPageHero extends Component {
         }
     }
 
+    
     render() {
 		const { category } = this.props
 		
@@ -37,25 +33,25 @@ class CategoryPageHero extends Component {
             <Fragment>
                 {
                     category === "dans"
-                        ? <div className="category-page-hero" style={{ backgroundImage: `url(${DanceHero})` }} >
+                        ? <div className="category-page-hero" style={{ backgroundImage: "url(/assets/images/dance.jpg)" }} >
                             <BackArrow transparent={true} goBack={this.props.goBack} />
                             <h1>{this.Capitalize(category)}</h1>
                             <p>{this.Category(category)}</p>
                         </div>
                         : category === "film"
-                            ? <div className="category-page-hero" style={{ backgroundImage: `url(${MovieHero})` }} >
+                            ? <div className="category-page-hero" style={{ backgroundImage: "url(/assets/images/movie.jpg)" }} >
                                 <BackArrow transparent={true} goBack={this.props.goBack} />
                                 <h1>{this.Capitalize(category)}</h1>
                                 <p>{this.Category(category)}</p>
                             </div>
                             : category === "musik"
-                                ? <div className="category-page-hero" style={{ backgroundImage: `url(${MusicHero})` }} >
+                                ? <div className="category-page-hero" style={{ backgroundImage: "url(/assets/images/music.jpg)" }} >
                                     <BackArrow transparent={true} goBack={this.props.goBack} />
                                     <h1>{this.Capitalize(category)}</h1>
                                     <p>{this.Category(category)}</p>
                                 </div>
                                 : category === "teater"
-                                    ? <div className="category-page-hero" style={{ backgroundImage: `url(${TheatreHero})` }} >
+                                    ? <div className="category-page-hero" style={{ backgroundImage: "url(/assets/images/teater.jpg)" }} >
                                         <BackArrow transparent={true} goBack={this.props.goBack} />
                                         <h1>{this.Capitalize(category)}</h1>
                                         <p>{this.Category(category)}</p>

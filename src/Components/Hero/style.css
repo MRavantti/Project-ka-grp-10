@@ -1,4 +1,4 @@
-.header {
+.hero {
     position: relative;
     width: 100%;
     height: 280px;
@@ -9,24 +9,27 @@
     align-items: left;
     color: white;
 	z-index: 0;
-	margin-bottom: 12px;
+    margin-bottom: 12px;
+    background-image: url("/assets/images/hero.jpg");
+    background-position: center;
+    background-size: contain;
 }
 
-.header span {
+.hero span {
 	font-size: 12px;
 }
 
-.header p {
+.hero p {
 	font-size: 16px;
 	width: 265px
 }
 
-.header p::first-letter {
+.hero p::first-letter {
 	text-transform: capitalize;
 
 }
 
-.header h1 {
+.hero h1 {
 	text-transform: capitalize;
 	width: 150px;
 	font-size: 30px;

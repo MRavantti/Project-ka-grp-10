@@ -4,7 +4,9 @@ import './style.css';
 const BackArrow = (props) => {
 
     let type = null; 
-	type = props.transparent && "transparent";
+    type = props.transparent && "transparent";
+    
+    console.log(props);
 
     return (
         <div className={`back-arrow ${type}`}>

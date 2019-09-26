@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import TypeIcon from '../TypeIcon';
 
-const Header = ({content}) => {
+const Hero = ({content}) => {
 
 	let title = content.title;
 	title = title.toLowerCase();
@@ -18,7 +18,7 @@ const Header = ({content}) => {
                 playerId: content.id
             }
         }}>
-            <div className="header" style={{backgroundImage: `url(${content.thumbnail})`}}>
+            <div className="hero">
                 <span>Videoföreläsning</span>
                 <h1>{title}</h1>
                 <p>{description}</p>
@@ -28,4 +28,4 @@ const Header = ({content}) => {
     );
 };
 
-export default Header;
+export default Hero;
