@@ -37,6 +37,11 @@
     /* margin-bottom: 22px; */
 }
 
+.mobile-menu-middle a {
+	color: #fff;
+	text-decoration: none;
+}
+
 .mobile-menu-middle div,
 .mobile-menu-bottom div {
     display: flex;
@@ -59,4 +64,9 @@
     height: 1px;
     width: 253px;
     margin-bottom: 22px;
+}
+
+.mobile-menu-bottom a {
+	color: #fff;
+	text-decoration: none;
 }
