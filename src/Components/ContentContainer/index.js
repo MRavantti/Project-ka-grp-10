@@ -32,7 +32,7 @@ const ContentContainer = (props) => {
     return (
         <div className="content-container">
             <SeeMore text="Senast Innehåll"/>
-            <ContentBox size={props.size} content={props.content}/>
+            <ContentBox size={props.size} content={props.content} image={props.image}/>
         </div>
     );
 };

@@ -1,18 +1,16 @@
 import React, { Component, Fragment } from 'react';
 import './CoursesPageHero.css'
-import BackButton from '../BackButton';
 
-import CoursesHero from '../../Images/courses-hero.png'
-import BackButtonImage from '../../Images/back-button.svg'
+import BackArrow from '../BackArrow';
 
 class CoursesPageHero extends Component {
     render() {
         const { category } = this.props
-
+        console.log(this.props);
         return (
             <Fragment>
-                <div className="courses-page-hero" style={{ backgroundImage: `url(${CoursesHero})` }} >
-                    <BackButton link={"/"} img={BackButtonImage} />
+                <div className="courses-page-hero">
+					<BackArrow transparent={true} goBack={this.props.goBack}/>
                     <h1>Kurskatalog</h1>
                     <p>Lorem ipsum dolor sit amet dolor copysum.</p>
                 </div>
