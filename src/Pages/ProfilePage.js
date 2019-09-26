@@ -6,7 +6,7 @@ import ContentContainer from '../Components/ContentContainer'
 import { Redirect } from 'react-router-dom'
 
 const ProfilePage = (props) => {
-    console.log(props.value);
+    console.log(props.isLoggedIn);
     
     return (
         <Fragment>
@@ -29,6 +29,7 @@ const ProfilePage = (props) => {
                         <ContentContainer size="small" type="course" text="Sparade favoriter" content={videos.slice(1, 16)} />
                         <ContentContainer size="small" type="course" text="Föreslaget innehåll" content={videos.slice(1, 16)} />
                     </Fragment>
+                    
                     : <Redirect to="/login" />
             }
         </Fragment>
