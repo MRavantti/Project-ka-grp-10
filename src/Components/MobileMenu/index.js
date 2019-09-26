@@ -35,7 +35,7 @@ export class MobileMenu extends Component {
                     <div className="border-line" />
                     
                     <div className="mobile-menu-bottom">
-                        <Link to="/profile"><div className="profile-item">
+                        <Link to="/profile" onClick={toggleMenu}><div className="profile-item">
                             <img src="/assets/svgs/person.svg" alt="profile icon" />
                             <p>Min profil</p>
                         </div></Link>
