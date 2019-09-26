@@ -7,7 +7,11 @@ import podcasts from '../data/soundcloud';
 
 const CategoryPage = (props) => {
 
-    const category = props.match.params.categoryId;
+	const category = props.match.params.categoryId;
+
+	let categoryVideos = videos.filter(item => item.tags && item.tags.filter(tag => tag.toLowerCase().includes(category)))
+
+	console.log(categoryVideos);
 
     return (
         <Fragment>

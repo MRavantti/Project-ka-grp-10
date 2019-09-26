@@ -10,10 +10,14 @@ import videos from '../data/youtube';
 import podcasts from '../data/soundcloud';
 
 const StartPage = () => {
+
+	let heroVideo = videos.filter(item => item.title.includes("Pia"));
+	heroVideo = heroVideo[0];
+
     return (
         <Fragment>
             <CategoryMenu/>
-            <Hero content={videos[20]}/>
+            <Hero content={heroVideo}/>
             <ContentContainer size="large" text="Senast Innehåll" content={videos[0]} image="/assets/images/talking-man.jpg"/>
             <ContentContainer size="small" text="Populära Videoföreläsningar" content={videos.slice(1, 16)}/>
             <ContentContainer size="large" text="Nytt Podcastavsnitt" info="Podcast-avsnitt" content={podcasts[0]} image="/assets/images/talking-woman.jpg"/>

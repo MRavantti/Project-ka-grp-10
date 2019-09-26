@@ -26,11 +26,12 @@
 
 .hero p::first-letter {
 	text-transform: capitalize;
-
 }
 
 .hero h1 {
-	text-transform: capitalize;
-	width: 150px;
+	/* text-transform: capitalize; */
+	width: 215px;
+	font-weight: bold;
+	line-height: 36px;
 	font-size: 30px;
 }

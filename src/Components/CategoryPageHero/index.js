@@ -10,18 +10,16 @@ class CategoryPageHero extends Component {
 
     Category(category) {
         if (category === "dans") {
-            return (
-                "ex “Från koreografi till samtal om salsa - här finner du allt material kopplat till dans”"
-            );
+            return ("Från koreografi till samtal om salsa - här finner du allt material kopplat till dans");
         }
         else if (category === "film") {
-            return ("film beskrivning")
+            return ("Här finner du allt material kopplat till film")
         }
         else if (category === "musik") {
-            return ("musik beskrivning")
+            return ("HÄr finner du allt material kopplat till musik")
         }
         else {
-            return ("teater beskrivning")
+			return ("HÄr finner du allt material kopplat till teater")
         }
     }
 
