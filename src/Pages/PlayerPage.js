@@ -11,10 +11,11 @@ const PlayerPage = (props) => {
 	if (content === undefined) {
 		content = podcasts.find(item => item.id === id);
 	}
+	
 
     return (
         <Fragment>
-            <BackArrow transparent={false}/>
+            <BackArrow transparent={false} goBack={props.history.goBack}/>
             <PlayerContainer content={content}/>
         </Fragment>
     )

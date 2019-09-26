@@ -8,10 +8,26 @@
     justify-content: center;
     align-items: left;
     color: white;
-    z-index: 0;
-    /* background-size: cover; */
+	z-index: 0;
+	margin-bottom: 12px;
+}
+
+.header span {
+	font-size: 12px;
 }
 
 .header p {
-    font-size: 12px;
+	font-size: 16px;
+	width: 265px
+}
+
+.header p::first-letter {
+	text-transform: capitalize;
+
+}
+
+.header h1 {
+	text-transform: capitalize;
+	width: 150px;
+	font-size: 30px;
 }
