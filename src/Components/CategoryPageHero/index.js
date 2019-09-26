@@ -7,7 +7,6 @@ import DanceHero from '../../Images/dance-hero.png'
 import MovieHero from '../../Images/movie-hero.png'
 import MusicHero from '../../Images/music-hero.png'
 import TheatreHero from '../../Images/theatre-hero.png'
-import BackButtonImage from '../../Images/back-button.png'
 
 class CategoryPageHero extends Component {
     Capitalize(str) {
