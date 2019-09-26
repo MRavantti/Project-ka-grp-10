@@ -19,6 +19,7 @@ const App = () => {
 	
 	const [audioUrl, setAudioUrl] = useState(null);
 
+	const [isLoggedIn, setIsLoggedIn] = useState(false)
 	return (
 		<Router>
 			<ScrollToTop/>
@@ -31,9 +32,9 @@ const App = () => {
 						<Route path="/player/:playerId" component={PlayerPage}/>
 						<Route path="/related-courses" component={RelatedPage} />
 						<Route path="/courses" component={CoursesPage} />
-						<Route path="/profile" component={ProfilePage} />
-						<Route path="/registration" component={RegistrationPage} />
-						<Route path="/login" component={LoginPage} />
+						<Route path="/profile" component={ProfilePage} value={{ isLoggedIn, setIsLoggedIn }} />
+						<Route path="/registration" component={RegistrationPage} value={{ isLoggedIn, setIsLoggedIn }} />
+						<Route path="/login" component={LoginPage} value={{ isLoggedIn, setIsLoggedIn }} />
 						{/* <Route component={NotFound}/> */}
 					</Switch>
 				</Layout>
