@@ -6,17 +6,17 @@
     flex-direction: column;
     align-items: flex-start;
 	top: 0;
-	margin-top: -80vh;
+	margin-top: -70vh;
     height: fit-content;
     width: 100%;
     background-color: #ED7D4C;
     padding: 24px 16px 24px 60px;
 	color: #fff;
-	transition: transform 1.2s ease-in-out;
+	transition: transform 0.7s ease-in;
 }
 
 .mobile-menu.visible {
-	transform: translateY(80vh);
+	transform: translateY(70vh);
 }
 
 .mobile-menu .cross-icon {

@@ -4,6 +4,7 @@ import './style.css';
 import SeeMore from '../SeeMore';
 import ContentBox from '../ContentBox';
 import SlideShow from '../SlideShow';
+import SlideShowFilter from '../SlideShowFilter';
 
 const ContentContainer = (props) => {
 
@@ -17,6 +18,7 @@ const ContentContainer = (props) => {
         return (
             <div className="content-container">
                 <SeeMore text={props.text} toggle={func}/>
+				{showMore && <SlideShowFilter/>}
                 <SlideShow type={props.type} content={props.content.slice(0, 5)}/>
                 {
                     showMore &&
