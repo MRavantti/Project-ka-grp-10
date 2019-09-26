@@ -36,7 +36,7 @@ const App = () => {
 						<Route path="/player/:playerId" component={PlayerPage}/>
 						<Route path="/related-courses" component={RelatedPage} />
 						<Route path="/courses" component={CoursesPage} />
-						<Route path="/profile" component={ProfilePage} /> {/*hello*/}
+						<Route path="/profile/:type" component={ProfilePage} /> {/*hello*/}
 						<Route path="/registration" component={RegistrationPage} /> {/*hello*/}
 						<Route path="/login" component={LoginPage} /> {/*hello*/}
 						{/* <Route component={NotFound}/> */}

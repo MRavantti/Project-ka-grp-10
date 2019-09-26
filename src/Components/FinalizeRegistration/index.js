@@ -17,10 +17,10 @@ const FinalizeRegistration = () => {
 					<img className="big-checked-circle" src="/assets/svgs/checked-circle.svg" />
 					<h1>Klart!</h1>
 				</div>
-				<Link to="/profile" className="go-to-profile">
+				<Link to="/profile/user" className="go-to-profile">
 					<div>
 						<p>Fortsätt till din profil</p>
-						<img src="/assets/svgs/forward-arrow.svg" />
+						<img src="/assets/svgs/forward-arrow.svg" alt="forward arrow"/>
 					</div>
 				</Link>
             </div>

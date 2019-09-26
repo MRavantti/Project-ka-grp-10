@@ -13,7 +13,7 @@ const TextContainer = (props) => {
                     <p>{props.info}</p>
                     <div className="interact-container">
                         <Interact text={"dela"} type="share"/>
-                        <Interact text={"spara"} type="save"/>
+                        <Interact text={"spara"} type="star"/>
                     </div>
                 </div>
             )
@@ -34,7 +34,7 @@ const TextContainer = (props) => {
             {
                 props.player && !props.show && 
                 <div className="see-more-btn" onClick={props.toggle}>
-                    <p>Se mer</p>
+                    <p>Visa mer</p>
                     <img src="/assets/svgs/down-arrow.svg" alt="Arrow down icon"/>
                 </div>
             }

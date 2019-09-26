@@ -7,6 +7,11 @@
     align-items: center;
 }
 
+a {
+	color: #000;
+	text-decoration: none;
+}
+
 .profile-info img {
     object-fit: cover;
     height: 100%;
@@ -45,4 +50,8 @@
     justify-content: flex-end;
     align-items: center;
     padding: 12px 8px;
+}
+
+.toggle p {
+	font-size: 14px;
 }
