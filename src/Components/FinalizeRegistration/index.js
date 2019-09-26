@@ -13,13 +13,18 @@ const FinalizeRegistration = () => {
     return (
         <Fragment>
             <div className="finalize-registration">
-                <img className="big-checked-circle" src="/assets/svgs/checked-circle.svg" />
-                <h1>Klart!</h1>
+				<div>
+					<img className="big-checked-circle" src="/assets/svgs/checked-circle.svg" />
+					<h1>Klart!</h1>
+				</div>
+				<Link to="/profile" className="go-to-profile">
+					<div>
+						<p>Fortsätt till din profil</p>
+						<img src="/assets/svgs/forward-arrow.svg" />
+					</div>
+				</Link>
             </div>
 
-			{/* EXEMPEL */}
-			<Link to="/profile">Fortsätt till profil</Link>
-			{/* EXEMPEL */}
         </Fragment >
     )
 }

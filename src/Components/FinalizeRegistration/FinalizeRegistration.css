@@ -5,7 +5,22 @@
 
 .finalize-registration {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 116px 0 255px 0;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 45vh;
+}
+
+.finalize-registration .go-to-profile {
+	color: #000;
+	text-decoration: none;
+}
+
+.go-to-profile div {
+	width: 100%;
+	display: flex;
+}
+
+.finalize-registration .go-to-profile p {
+	margin-right: 5px;
 }
