@@ -2,14 +2,10 @@ import React, { Fragment } from 'react';
 import CoursesPageHero from '../Components/CoursesPageHero';
 import ContentContainer from '../Components/ContentContainer'
 import Button from '../Components/Button'
-import CurrentCourses from '../Images/art&business.png'
 import videos from '../data/youtube.json';
 
 
 const CoursesPage = (props) => {
-
-    const category = props.match.params.categoryId;
-    console.log(props.location.state);
 
     return (
         <Fragment>

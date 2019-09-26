@@ -3,6 +3,7 @@
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("/assets/images/courses-hero.png");
 }
 
 .courses-page-hero p,

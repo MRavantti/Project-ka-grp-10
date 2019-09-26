@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './CoursesPageHero.css'
 
-import CoursesHero from '../../Images/courses-hero.png'
 import BackArrow from '../BackArrow';
 
 class CoursesPageHero extends Component {
@@ -10,7 +9,7 @@ class CoursesPageHero extends Component {
 
         return (
             <Fragment>
-                <div className="courses-page-hero" style={{ backgroundImage: `url(${CoursesHero})` }} >
+                <div className="courses-page-hero">
 					<BackArrow/>
                     <h1>Kurskatalog</h1>
                     <p>Lorem ipsum dolor sit amet dolor copysum.</p>

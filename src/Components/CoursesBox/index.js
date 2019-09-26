@@ -8,7 +8,7 @@ const CoursesBox = () => {
             <p>Uppskattar du vårt innehåll?</p>
             <p>Vi har kurser och föredrag inom samtliga ämnen du kan 
                 lära dig mer om under varje kopplad video eller podcast.</p>
-            <Button text="Kurser & föreläsningar"/>
+            <Button text="Kurser & föreläsningar" link="/courses"/>
         </div>
     );
 };
