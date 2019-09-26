@@ -78,6 +78,7 @@ const CategoryPage = (props) => {
 				<ContentContainer size="small" text="Senaste Videoföreläsningar" content={categoryVideos.slice(0, 15)}/>
 				<ContentContainer size="small" text="Podcasts utvalda för dig" content={categoryPodcasts.slice(15, 30)}/>
 			</Fragment>);
+			setFilter(null);
 		}
 		else if (type === "videos") {
 			setFilter(type);
