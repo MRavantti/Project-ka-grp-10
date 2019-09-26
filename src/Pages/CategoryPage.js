@@ -8,7 +8,6 @@ import podcasts from '../data/soundcloud';
 const CategoryPage = (props) => {
 
     const category = props.match.params.categoryId;
-    console.log(props.location.state);
 
     return (
         <Fragment>

@@ -11,7 +11,6 @@ const ContentContainer = (props) => {
 
     const func = () => {
         setShowMore(!showMore);
-        console.log('hello');
     }
 
     if (props.size === "small") {

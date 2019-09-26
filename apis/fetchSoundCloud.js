@@ -17,9 +17,9 @@ const fetchSoundCloud = async () => {
 
 		// Removing everything behind -, – in title
 		// Two difference dashes, dont remove any of them
+		let longTitle = track.title;
         let title = track.title.replace(/-.+/, '');
 		title = title.replace(/–.+/, '');
-		let longTitle = title;
         title = title.replace(/:.+/, '');
 
         let imageUrl = track.artwork_url.replace(/(large)/, "t500x500");

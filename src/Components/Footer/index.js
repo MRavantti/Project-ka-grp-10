@@ -1,9 +1,23 @@
 import React from 'react';
 import './style.css'
 
-const Footer = () => {
+const Footer = (props) => {
+
+    let className;
+
+    if (props.player) {
+        if (props.location.state) {
+            if (props.player.includes(props.location.state.playerId)) {
+                className = null;
+            }
+        }   
+        else {
+            className = "margin";
+        } 
+    }
+
     return (
-        <div className="footer">
+        <div className={`footer ${className}`}>
             <img src="/assets/svgs/kulturakademin.svg" alt="kulturakademin icon"/>
             <a href="https://kulturakademin.com">kulturakademin.com</a>
             <div className="icons">
