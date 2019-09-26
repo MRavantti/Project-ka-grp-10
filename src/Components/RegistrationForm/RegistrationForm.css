@@ -1,0 +1,41 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-registration {
+    height: 43px;
+    background-color: #F4F4F4;
+    width: 90vw;
+    border-radius: 5px;
+    margin-top: 19px;
+    font-size: 16px;
+    padding-left: 22px;
+}
+
+.registration-welcome {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.registration-button {
+    width: 100px;
+    height: 43px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #81AA3D;
+    color: #fff;
+    margin-top: 60px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+}
+
+input {
+    border: none;
+    outline: none;
+}
