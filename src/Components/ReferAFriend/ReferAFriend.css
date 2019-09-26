@@ -48,3 +48,13 @@
     border-radius: 5px;
     margin-right: 16px;
 }
+
+.skip-this-step-button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+}
+
+.skip-this-step-button p {
+    margin-right: 5px;
+}

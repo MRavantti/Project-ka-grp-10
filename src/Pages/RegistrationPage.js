@@ -2,16 +2,17 @@ import React, { Component, Fragment } from 'react';
 import RegistrationForm from '../Components/RegistrationForm';
 import RegistrationProgressionCheck from '../Components/RegistrationProgressionCheck';
 import ReferAFriend from '../Components/ReferAFriend';
+import FinalizeRegistration from '../Components/FinalizeRegistration';
 
 class RegistrationPage extends Component {
     state = {
-        progression: "2"
+        progression: "1"
     }
 
     ChangeCurrentState = (e) => {
-        if(this.state.progression ==="1"){
+        if (this.state.progression === "1") {
             e.preventDefault()
-            this.setState({progression: "2"})
+            this.setState({ progression: "2" })
         }
         else if (this.state.progression === "2") {
             e.preventDefault()
@@ -21,16 +22,18 @@ class RegistrationPage extends Component {
     render() {
         return (
             <Fragment>
-                 <RegistrationProgressionCheck state={this.state.progression} />
+                <RegistrationProgressionCheck state={this.state.progression} />
                 {
                     this.state.progression === "1"
-                    ? <RegistrationForm changeState={this.ChangeCurrentState}/>
-                    : <ReferAFriend />
+                        ? <RegistrationForm changeState={this.ChangeCurrentState} />
+                        : this.state.progression === "2"
+                            ? <ReferAFriend changeState={this.ChangeCurrentState}/>
+                            : <FinalizeRegistration />
                 }
 
-        </Fragment>
-    );
-}
+            </Fragment>
+        );
+    }
 };
 
 export default RegistrationPage;

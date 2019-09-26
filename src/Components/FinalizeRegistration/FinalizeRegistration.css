@@ -1,0 +1,11 @@
+.big-checked-circle {
+    width: 100px;
+    height: 100px;
+}
+
+.finalize-registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 116px 0 255px 0;
+}
