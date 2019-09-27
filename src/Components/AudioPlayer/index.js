@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, Fragment } from 'react';
 import { PlayButton, PrevButton, NextButton, Timer, Progress } from 'react-soundplayer/components';
 import { withCustomAudio } from 'react-soundplayer/addons';
 import './style.css';
@@ -7,12 +7,12 @@ import podcasts from '../../data/soundcloud.json'
 
 
 const AudioPlayer = withCustomAudio(props => {
-    const { soundCloudAudio, trackTitle } = props;
+	const { soundCloudAudio, trackTitle } = props;
 	const audio = soundCloudAudio.audio;
 	let title = trackTitle;
-
+	
 	const { audioUrl, setAudioUrl} = useContext(AudioPlayerContext);
-
+	
 	const previous = () => {
 		audio.currentTime = 0;
 	}
@@ -69,6 +69,17 @@ const AudioPlayer = withCustomAudio(props => {
 
     return (
         <div className={`audio-player ${props.size}`} style={{backgroundImage: `url(${props.content.thumbnail})`}}>
+			{props.size === "large" && 
+				<Fragment>
+					<img className="large-player-hero" src={props.content[0].thumbnail}/>
+					<img className="close-fullscreen" onClick={props.closePlayer} src="/assets/svgs/cross-black.svg" alt="cross"/>
+					<div className="large-flex">
+					<h4>Nu spelas: </h4>
+					<img className="minimize-fullscreen" onClick={props.toggleFullscreen} src="/assets/svgs/down-arrow-white.svg"/>
+					</div>
+					<p>{props.content[0].longTitle}</p>
+				</Fragment>
+			}
 			{props.size === "small" && 
 			<div className="player-info" onClick={props.toggleFullscreen}>
 				<p>Nu spelas: {title}</p>
@@ -101,7 +112,7 @@ const AudioPlayer = withCustomAudio(props => {
 						className="replay-button"
 					/>
 
-					{props.size === "small" && 
+					{props.size !== "medium" && 
 					<PlayButton
 						onTogglePlay={togglePlay}
 						className={`play-button ${audio.playing && "playing"}`}
@@ -118,7 +129,7 @@ const AudioPlayer = withCustomAudio(props => {
 						className="forward-button"
 					/>
 
-					{props.size === "small" && (
+					{props.size !== "medium" && (
 						(typeof currentTime === "string" && typeof duration === "string") ?
 						<div className="timer">{currentTime} | {duration}</div> : 
 						<div className="timer">00:00 | 00:00</div>)
