@@ -71,8 +71,8 @@ const AudioPlayer = withCustomAudio(props => {
         <div className={`audio-player ${props.size}`} style={{backgroundImage: `url(${props.content.thumbnail})`}}>
 			{props.size === "large" && 
 				<Fragment>
-					<img className="large-player-hero" src={props.content[0].thumbnail}/>
-					<img className="close-fullscreen" onClick={props.closePlayer} src="/assets/svgs/cross-black.svg" alt="cross"/>
+					<img className="large-player-hero" src="/assets/images/podcast.jpg"/>
+					<img className="close-fullscreen" onClick={props.closePlayer} src="/assets/svgs/cross.svg" alt="cross"/>
 					<div className="large-flex">
 					<h4>Nu spelas: </h4>
 					<img className="minimize-fullscreen" onClick={props.toggleFullscreen} src="/assets/svgs/down-arrow-white.svg"/>
@@ -120,8 +120,8 @@ const AudioPlayer = withCustomAudio(props => {
 
 					{props.size === "medium" && (
 						(typeof currentTime === "string" && duration !== "NaN:NaN") ?
-						<div className="timer">{currentTime} | {duration}</div> : 
-						<div className="timer">00:00 | 00:00</div>)
+						<div className="timer">{currentTime} | <span>{duration}</span></div> : 
+						<div className="timer">00:00 | <span>00:00</span></div>)
 					}
 
 					<NextButton
@@ -131,8 +131,8 @@ const AudioPlayer = withCustomAudio(props => {
 
 					{props.size !== "medium" && (
 						(typeof currentTime === "string" && typeof duration === "string") ?
-						<div className="timer">{currentTime} | {duration}</div> : 
-						<div className="timer">00:00 | 00:00</div>)
+						<div className="timer">{currentTime} | <span>{duration}</span></div> : 
+						<div className="timer">00:00 | <span>00:00</span></div>)
 					}
 
 				</div>

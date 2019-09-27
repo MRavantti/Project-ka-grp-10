@@ -33,12 +33,13 @@
 	height: 91vh;
 	width: 100%;
 	background: #8973B8;
-	padding: 0 0 64px 0;
+	padding: 0 0 80px 0;
 }
 
 
 .audio-player.large .large-player-hero {
 	width: 100%;
+	margin-bottom: 64px;
 }
 
 .audio-player.large .close-fullscreen {
@@ -238,4 +239,8 @@
 	margin-right: 16px;
 	width: 40px;
 	height: 40px;
+}
+
+.timer span {
+	opacity: 0.5;
 }
