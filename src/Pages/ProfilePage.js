@@ -39,12 +39,11 @@ const ProfilePage = (props) => {
 
                         <div className="line" />
 
-                        <ContentContainer size="small" type="course" text="Mina kurser" content={videos.slice(1, 16)} />
+                        <ContentContainer size="small" type="course" text="Fortsätt titta" content={videos.slice(1, 16)} />
 
                         <div className="line" />
 
-                        <ContentContainer size="small" type="course" text="Fortsätt titta" content={videos.slice(1, 16)} />
-                        <ContentContainer size="small" type="course" text="Sparade favoriter" content={videos.slice(1, 16)} />
+                        <ContentContainer size="small" type="course" text="Sparade favoriter" content={podcasts.slice(1, 16)} />
                         <ContentContainer size="small" type="course" text="Föreslaget innehåll" content={videos.slice(1, 16)} />
                     </Fragment>
 
