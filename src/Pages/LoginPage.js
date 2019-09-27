@@ -21,7 +21,7 @@ const LoginPage = (props) => {
                         <p className="cta-register">Inte medlem? <Link to="registration" ><span className="register-link">Registrera dig här</span></Link></p>
                     </Fragment>
                     
-                    : <Redirect to="/profile" />
+                    : <Redirect to="/profile/user" />
             }
         </Fragment>
     );

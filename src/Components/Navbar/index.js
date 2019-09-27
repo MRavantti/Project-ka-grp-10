@@ -27,7 +27,6 @@ export class Navbar extends Component {
 	}
 
 	hideSearch = () => {
-		console.log('click');
 		this.setState(() => ({
 			searchVisable: false
 		}))
@@ -36,20 +35,14 @@ export class Navbar extends Component {
     render() {
         return (
             <Fragment>
-				<SearchBar class={this.state.searchVisable ? "visible" : null}/>
-                {
-                    this.state.menuVisable
-                        ? <Fragment>
-                            <MobileMenu toggleMenu={this.toggleMenu} />
-                            <div className="navbar">
-                                <NavbarItems toggleMenu={this.toggleMenu} />
-                            </div>
+				<SearchBar myClass={this.state.searchVisable ? "visible" : null}/>
+                        <Fragment>
+                            <MobileMenu toggleMenu={this.toggleMenu} myClass={this.state.menuVisable ? "visible" : null}/>
                         </Fragment>
                         
-                        : <div className="navbar">
+                        <div className="navbar">
                             <NavbarItems toggleMenu={this.toggleMenu} toggleSearch={this.toggleSearch} searchVisible={this.state.searchVisable} hideSearch={this.hideSearch}/>
                         </div>
-                }
             </Fragment>
         )
     }

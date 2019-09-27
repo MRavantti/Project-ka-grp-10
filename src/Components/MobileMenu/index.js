@@ -6,9 +6,10 @@ export class MobileMenu extends Component {
 
     render() {
         const { toggleMenu } = this.props
+		const { myClass } = this.props
         return (
             <Fragment>
-                <div className="mobile-menu">
+                <div className={`mobile-menu ${myClass}`}>
 
                     <div className="mobile-menu-top">
                         <p>KATEGORIER</p>
@@ -35,7 +36,7 @@ export class MobileMenu extends Component {
                     <div className="border-line" />
                     
                     <div className="mobile-menu-bottom">
-                        <Link to="/profile" onClick={toggleMenu}><div className="profile-item">
+                        <Link to="/profile/user" onClick={toggleMenu}><div className="profile-item">
                             <img src="/assets/svgs/person.svg" alt="profile icon" />
                             <p>Min profil</p>
                         </div></Link>

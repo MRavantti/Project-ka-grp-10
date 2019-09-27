@@ -1,7 +1,7 @@
 .info-box {
     display: grid;
-    grid-template: auto auto / auto auto;
-    grid-gap: 10px;
+    grid-template: auto auto / auto auto auto;
+    grid-gap: 16px;
     margin-top: 16px;
 }
 
